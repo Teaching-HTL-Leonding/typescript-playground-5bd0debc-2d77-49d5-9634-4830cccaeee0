@@ -9,6 +9,8 @@ function setup() {
     triangle(70, 400, 580, 400, 325, 225);
 
     fill("yellow");
+    rect(265, 650, 120, 200)
+
 
     
 
