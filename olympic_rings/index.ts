@@ -19,8 +19,8 @@ function setup() {
 
   strokeWeight(15);
   stroke("yellow");
-
   circle(325, 310, 200);
+
   strokeWeight(15);
   stroke("blue");
   circle(210, 200, 200);
