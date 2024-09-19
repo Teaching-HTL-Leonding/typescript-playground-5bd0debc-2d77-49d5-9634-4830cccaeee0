@@ -3,13 +3,15 @@ function setup() {
     background("lightblue");
 
     fill("red")
-    rect(100, 400, 450);
+    rect(100, 500, 450);
 
     fill("brown");
-    triangle(70, 400, 580, 400, 325, 225);
+    triangle(70, 500, 580, 500, 325, 225);
 
     fill("yellow");
-    rect(265, 650, 120, 200)
+    rect(265, 750, 120, 200);
+
+
 
 
     
