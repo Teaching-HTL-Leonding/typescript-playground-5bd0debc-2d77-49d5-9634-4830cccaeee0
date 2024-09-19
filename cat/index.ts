@@ -25,12 +25,10 @@ function setup() {
     line(140, 195, 100, 195);
     line(200, 195, 160, 195);
     //Schräge Linie 
-    line(100, 190, );
-    line();
+    line(100, 180, 140, 190);
+    line(160, 190, 200, 180);
 
-
-
-
-
+    fill("lightgray")
+    triangle()
 
 }
