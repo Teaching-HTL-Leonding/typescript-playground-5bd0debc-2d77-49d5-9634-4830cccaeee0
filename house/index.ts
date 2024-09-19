@@ -1,5 +1,6 @@
 function setup() {
     createCanvas(3000, 3000);
+
     background("lightblue");
 
     fill("red")
@@ -21,17 +22,5 @@ function setup() {
     circle(850, 470, 250);
 
     fill("green");
-    circle(1020, 470, 250)
-
-
-    
-
-
-    
-
-
-
-
-
-
+    circle(1020, 470, 250);
 }
