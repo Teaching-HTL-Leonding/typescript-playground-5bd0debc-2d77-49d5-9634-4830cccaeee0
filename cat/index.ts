@@ -29,7 +29,6 @@ function setup() {
     line(160, 190, 200, 180);
 
     fill("lightgray");
-    triangle(120, 90, 100, 60, 90, 110);
-    triangle();
-
+    triangle(120, 90, 100, 60, 80, 110);
+    triangle(220, 110, 190, 60, 170, 90);
 }
