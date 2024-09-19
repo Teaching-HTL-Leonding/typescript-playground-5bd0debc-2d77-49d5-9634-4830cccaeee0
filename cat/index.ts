@@ -28,7 +28,8 @@ function setup() {
     line(100, 180, 140, 190);
     line(160, 190, 200, 180);
 
-    fill("lightgray")
-    triangle()
+    fill("lightgray");
+    triangle(120, 90, 100, 60, 90, 110);
+    triangle();
 
 }
