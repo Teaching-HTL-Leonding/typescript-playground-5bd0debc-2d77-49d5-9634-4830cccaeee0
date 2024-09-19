@@ -20,7 +20,7 @@ function setup() {
     line(130, 210, 150, 200);
     //Von Nasenstriche-Striche weg
     line(130, 210, 100, 200);
-    line();
+    line(200, 200, 170, 210);
     //Gerade Striche 
     line(140, 195, 100, 195);
     line(200, 195, 160, 195);
