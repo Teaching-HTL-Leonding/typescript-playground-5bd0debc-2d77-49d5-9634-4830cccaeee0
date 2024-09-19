@@ -2,7 +2,7 @@ function setup() {
     createCanvas(300, 300);
     background("rgb(0, 255, 255)");
 
-    fill(" lightgrey");
+    fill("lightgrey");
     circle(150, 170, 150);
 
     fill("black");
@@ -14,7 +14,9 @@ function setup() {
 
     stroke("black");
     line(150, 180, 150, 200);
-    line(160, 200, 20, 210)
+    line(150, 200, 170, 210);
+    line(130, 210, 150, 200);
+    line();
 
 
 
