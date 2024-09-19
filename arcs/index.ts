@@ -22,5 +22,5 @@ function setup() {
   // |    |    |    |    +-------- start angle
   // |    |    |    |    |   +---- end angle
   // v    v    v    v    v   v
-  arc(200, 250, 200, 150, 25, 180);
+  arc(200, 250, 200, 150, 15, 170);
 }
