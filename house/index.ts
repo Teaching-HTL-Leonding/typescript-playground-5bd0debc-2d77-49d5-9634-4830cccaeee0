@@ -10,6 +10,20 @@ function setup() {
 
     fill("yellow");
     rect(265, 650, 120, 200);
+
+    fill("brown");
+    rect(900, 450, 80, 410);
+
+    fill("green");
+    circle(940, 400, 250);
+
+    fill("green");
+    circle(850, 470, 250);
+
+    fill("green");
+    circle(1020, 470, 250)
+
+
     
 
 
