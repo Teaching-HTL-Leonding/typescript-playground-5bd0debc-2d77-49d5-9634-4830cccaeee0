@@ -1,29 +1,16 @@
 function setup() {
-    createCanvas(300, 300);
-    background("gold");
+    createCanvas(400, 400);
+    frameRate(200);
 }
 
-function mouseClicked() {
-    fill("red");
-    noStroke();
-    circle(mouseX, mouseY, 10);
+let x = 150;
 
-    fill("gold");
-    noStroke();
-    rect(0, height - 20, width / 2, height);
-
-    fill("black");
-    text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5);
+function draw() {
+    background("black");
+    fill("yellow");
+    circle(x, x, 50);
+    x += random(-10, 10);
+    
+    
 }
-function mouseMoved() {
-    noStroke();
-    fill("lime");
-    circle(mouseX, mouseY, 10);
 
-    fill("gold");
-    noStroke();
-    rect(150,height - 20, width / 2, height-5);
-
-    fill ("black");
-    text(`X: ${mouseX}, Y: ${mouseY}`, 200, height-5);
-}
