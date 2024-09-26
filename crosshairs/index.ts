@@ -15,5 +15,4 @@ function mouseMoved() {
   // Linie eins und zwei
   line(mouseX, mouseY - 30, mouseX, mouseY + 30);
   line(mouseX - 30, mouseY, mouseX + 30, mouseY);
-
 }
