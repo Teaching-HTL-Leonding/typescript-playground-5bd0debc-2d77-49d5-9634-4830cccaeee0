@@ -5,5 +5,9 @@ function setup() {
     noStroke();
 }
 
+// GLOBAL variable "color_hue". Lthough TypeScript does not require
+// specifying
+
 function mouseMoved() {
 }
+
