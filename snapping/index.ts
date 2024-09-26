@@ -9,8 +9,8 @@ function mouseMoved() {
 
   background("lightblue");
 
-  const x: number = Math.round(mouseX /40)*40;
-  const y: number = Math.round(mouseY /40)*40; 
+  const x: number = Math.round(mouseX / 40) * 40;
+  const y: number = Math.round(mouseY / 40) * 40;
 
   // Crosshair
   strokeWeight(5);
@@ -19,11 +19,5 @@ function mouseMoved() {
   line(x, y - 10, x, y + 10);
 
   strokeWeight(1);
-  text(`X: ${mouseX}, Y: ${mouseY}`, 5, height-5 );
-
-
-  
-  
-
-
+  text(`X: ${mouseX}, Y: ${mouseY}`, 5, height - 5);
 }
