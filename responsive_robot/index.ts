@@ -13,7 +13,10 @@ function setup() {
   const mouthweight = headWidth*0.50;
   const mouthX = headX + headWidth*0.25; 
   const mouthY = headY + headHeight*0.70;
-  const linie = headWidth*0.50;
+  const liniestartX = width*0.50;
+  const liniestartY = headY-headHeight*0.25
+  const lineendX = width*0.50
+  const lineendY = width*0.50
 
   // Draw the robot's head
   fill("gray");
@@ -30,7 +33,7 @@ function setup() {
   rect(mouthX, mouthY, mouthweight, mouthheight);
 
   // Antenne
-  line();
+  line(  );
 
 
 
