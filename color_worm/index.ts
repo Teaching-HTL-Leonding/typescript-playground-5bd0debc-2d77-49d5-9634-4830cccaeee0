@@ -6,7 +6,7 @@ function setup() {
 }
 
 // GLOBAL variable "color_hue". Lthough TypeScript does not require
-// specifying a dsta type, you MUST ALWAYS do it in this course
+// specifying a data type, you MUST ALWAYS do it in this course
 // for practicing purposes!
 //             +----------- Data type (e.g. number, string, boolean)
 //             v
