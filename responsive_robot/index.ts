@@ -33,7 +33,9 @@ function setup() {
   rect(mouthX, mouthY, mouthweight, mouthheight);
 
   // Antenne
-  line(  );
+  line(liniestartX, liniestartY, lineendX, lineendY );
+
+  circle(lineendX, liniestartY, 20)
 
 
 
