@@ -6,8 +6,18 @@ function setup() {
 }
 
 // GLOBAL variable "color_hue". Lthough TypeScript does not require
-// specifying
+// specifying a dsta type, you MUST ALWAYS do it in this course
+// for practicing purposes!
+//             +----------- Data type (e.g. number, string, boolean)
+//             v
+let color_hue: number = 0;
 
 function mouseMoved() {
+    // Draw a circle with the current hue
+    fill(color_hue, 100, 100);
+    circle(mouseX, mouseY, 40);
+
+    // Note the use of the % operator (modulo)
+    color_hue = (color_hue + 5) % 360;
 }
 
