@@ -7,10 +7,22 @@ function setup() {
   const headHeight = height * 0.50; // Head size as 50% of the canvas width
   const headX = width / 2 - headWidth / 2; // Center the head horizontally
   const headY = height / 2 - headHeight / 2; // Center the head vertically
+  const eyes1 = headX+headWidth*0.25
+  const eyes2 = headY+headWidth*0.25
+  const mouth = headHeight*0.
 
   // Draw the robot's head
   fill("gray");
   rect(headX, headY, headWidth, headHeight);
 
   // Add your code here
+  // Eyes
+  fill("black");
+  circle(eyes1, eyes2, 30);
+  circle(eyes1+100, eyes2, 30);
+  //Mouth
+
+
+
+
 }
