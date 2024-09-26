@@ -37,4 +37,7 @@ function setup() {
   line(liniestartX, liniestartY, lineendX, lineendY);
 
   circle(lineendX, liniestartY, 20);
+
+
 }
+  
