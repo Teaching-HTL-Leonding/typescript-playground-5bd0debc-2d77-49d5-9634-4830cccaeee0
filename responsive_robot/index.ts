@@ -16,7 +16,8 @@ function setup() {
   const liniestartX = width*0.50;
   const liniestartY = headY-headHeight*0.25
   const lineendX = width*0.50
-  const lineendY = width*0.50
+  const lineendY = width*0.25
+  
 
   // Draw the robot's head
   fill("gray");
