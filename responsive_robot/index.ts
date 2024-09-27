@@ -8,7 +8,7 @@ function setup() {
   const headX = width / 2 - headWidth / 2; // Start Punkt oben links vom rect DER X WERT
   const headY = height / 2 - headHeight / 2; // Start Punkt oben links vom rect DER Y WERT
   const eye1X = headX + headWidth * 0.25;
-  const eyeY = headY + headWidth * 0.25;
+  const eyeY = headY + headHeight * 0.25;
   const eye2X = headX + headWidth * 0.75;
   const eyediameter = Math.min(headWidth, headHeight) * 0.20;
   const mouthheight = headHeight * 0.10;
