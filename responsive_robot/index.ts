@@ -9,7 +9,7 @@ function setup() {
   const headY = height / 2 - headHeight / 2; // Center the head vertically
   const eyes1 = headX + headWidth * 0.25;
   const eyes2 = headY + headWidth * 0.25;
-  const eyes3 = headX + headWidth * 0.25 + 100;
+  const eyes3 = headX + headWidth * 0.75;
   const mouthheight = headHeight * 0.10;
   const mouthweight = headWidth * 0.50;
   const mouthX = headX + headWidth * 0.25;
