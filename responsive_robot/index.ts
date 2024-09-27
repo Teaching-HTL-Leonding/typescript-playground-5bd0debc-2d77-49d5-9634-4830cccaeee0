@@ -20,6 +20,7 @@ function setup() {
   const lineendX = width * 0.50;
   const linelength = headHeight * 0.25;
   const lineendY = liniestartY + linelength;
+  const antennediameter = eyediameter * 0.50;
 
 
   // Draw the robot's head
@@ -39,5 +40,5 @@ function setup() {
   // Antenne
   line(liniestartX, liniestartY, lineendX, lineendY);
 
-  circle(lineendX, liniestartY, 20);
+  circle(lineendX, liniestartY, antennediameter);
 }
