@@ -9,6 +9,7 @@ function setup() {
   const headY = height / 2 - headHeight / 2; // Center the head vertically
   const eyes1 = headX + headWidth * 0.25;
   const eyes2 = headY + headWidth * 0.25;
+  const eyes3 = headX + headWidth * 0.25 + 100;
   const mouthheight = headHeight * 0.10;
   const mouthweight = headWidth * 0.50;
   const mouthX = headX + headWidth * 0.25;
@@ -27,7 +28,7 @@ function setup() {
   // Eyes
   fill("black");
   circle(eyes1, eyes2, 30);
-  circle(eyes1 + 100, eyes2, 30);
+  circle(eyes3, eyes2, 30);
 
   //Mouth
   fill("white");
@@ -37,7 +38,4 @@ function setup() {
   line(liniestartX, liniestartY, lineendX, lineendY);
 
   circle(lineendX, liniestartY, 20);
-
-
 }
-  
