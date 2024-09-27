@@ -40,5 +40,5 @@ function setup() {
   // Antenne
   line(liniestartX, liniestartY, lineendX, lineendY);
 
-  circle(lineendX, liniestartY, antennediameter);
+  circle(liniestartX, liniestartY, antennediameter);
 }
