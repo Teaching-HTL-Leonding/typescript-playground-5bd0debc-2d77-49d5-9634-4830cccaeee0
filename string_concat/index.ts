@@ -4,24 +4,26 @@ function setup() {
 }
 let lastX: number = 0;
 let lastY: number = 0;
-let Koordinaten: string = '0/0, '; 
+let Koordinaten: string = '0/0, ';
 
 function mouseClicked() {
   // alten kreis löschen
   fill("lightblue");
   stroke("lightblue");
-  circle(lastX, lastY, 30); 
+  circle(lastX, lastY, 30);
   // variablen zuweisen
-  lastX = mouseX
-  lastY = mouseY
+  lastX = mouseX;
+  lastY = mouseY;
   // neuer kreis
   fill("aqua");
   stroke("aqua");
   circle(mouseX, mouseY, 30);
-
+  // text erweitern 
+  Koordinaten = Koordinaten + `${mouseX}, ${mouseY} ` ;
   fill("black")
-  stroke("black");;
+  stroke("black");
   text(`${Koordinaten}`, 10, 10, 200, 200);
+  
 }
 
 
