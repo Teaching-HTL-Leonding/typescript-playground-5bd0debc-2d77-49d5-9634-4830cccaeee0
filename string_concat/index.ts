@@ -17,9 +17,8 @@ function mouseClicked() {
   stroke("aqua");
   circle(lastX, lastY, 30);
   // text erweitern 
-  Koordinaten = Koordinaten + `${lastX}/${lastY}, ` ;
+  Koordinaten = Koordinaten + `${lastX}/${lastY}, `;
   fill("black");
   stroke("black");
   text(`${Koordinaten}`, 10, 10, 590, 600);
-  
 }
