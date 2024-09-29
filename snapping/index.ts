@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(200, 200);
   background("lightblue");
 }
 
@@ -12,12 +12,12 @@ function mouseMoved() {
   const x: number = Math.round(mouseX / 40) * 40;
   const y: number = Math.round(mouseY / 40) * 40;
 
-  // Crosshair
+  // crosshair
   strokeWeight(5);
   stroke("white");
   line(x - 10, y, x + 10, y);
   line(x, y - 10, x, y + 10);
-
+  // coordinates
   strokeWeight(1);
-  text(`X: ${mouseX}, Y: ${mouseY}`, 5, height - 5);
+  text(` ${x} / ${y}`, 5, height - 5);
 }
