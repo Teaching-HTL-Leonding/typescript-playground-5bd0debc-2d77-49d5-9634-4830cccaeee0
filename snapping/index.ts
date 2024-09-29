@@ -17,6 +17,7 @@ function mouseMoved() {
   stroke("white");
   line(x - 10, y, x + 10, y);
   line(x, y - 10, x, y + 10);
+  
   // coordinates
   strokeWeight(1);
   text(` ${x} / ${y}`, 5, height - 5);
