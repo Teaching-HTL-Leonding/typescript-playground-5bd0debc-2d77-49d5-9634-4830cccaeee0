@@ -17,7 +17,7 @@ function mouseClicked() {
   // neuer kreis
   fill("aqua");
   circle(lastX, lastY, 40);
-   // text erweitern 
+  // text erweitern 
   Koordinaten = Koordinaten + `${lastX}/${lastY}, `;
   fill("black");
   text(`${Koordinaten}`, 10, 10, 590, 600);
