@@ -28,7 +28,7 @@ function mouseClicked() {
         // Note the `else if` statement here. If the user did not 
         // click in the yellow area, it checks if the user clicked 
         // in  the second area (green).
-    }else { 
+    } else {
         // If the click was not in the yellow and not in the green
         // area, the click must have been in the area.
         message = "Green";
