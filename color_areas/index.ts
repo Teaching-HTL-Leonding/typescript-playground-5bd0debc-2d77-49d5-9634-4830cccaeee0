@@ -15,6 +15,9 @@ function setup() {
 
 function mouseClicked() {
 
+    fill("black");
+    rect(0, 150, width, 50)
+
     fill("white");
     // The message variable will recive the message to print
     let message: string;
@@ -29,9 +32,11 @@ function mouseClicked() {
         // click in the yellow area, it checks if the user clicked 
         // in  the second area (green).
     } else {
+        message = "Green";
         // If the click was not in the yellow and not in the green
         // area, the click must have been in the area.
-        message = "Green";
     }
-
+    textAlign(CENTER);
+    textSize(40);
+    text(message, 200, 180);
 }
