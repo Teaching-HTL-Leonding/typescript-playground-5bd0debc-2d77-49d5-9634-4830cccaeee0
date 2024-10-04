@@ -14,6 +14,11 @@ function setup() {
 
     fill("blue");
     rect(width / 2, height / 2, width / 2, height / 2);
+
+    fill("black");
+    //rect(width / 2 - width / 4, height / 2 - height / 6, width / 2, height / 3);
+    rectMode(CENTER);
+    rect(width / 2, height / 2, width / 2, height / 3);
 }
 
     function mouseClicked() {
