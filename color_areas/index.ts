@@ -18,6 +18,7 @@ function mouseClicked() {
     // The message variable will recive the message to print
     let message: string;
 
-    
+    // Note the `ìf` statement here. It checks is the mouse click
+    // was in the area (yellow). If it was, the message is "Yellow".
 
 }
