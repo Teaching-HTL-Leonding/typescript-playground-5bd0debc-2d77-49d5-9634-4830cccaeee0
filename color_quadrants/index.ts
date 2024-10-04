@@ -42,7 +42,7 @@ function mouseClicked() {
         message = "Blue"
     }
 
-    textAlign(CENTER);
+    textAlign(CENTER, CENTER);
     textSize(30);
     text(message, width / 2, height / 2);
 }
