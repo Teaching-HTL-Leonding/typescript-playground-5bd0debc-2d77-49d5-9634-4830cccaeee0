@@ -16,7 +16,7 @@ function setup() {
 function mouseClicked() {
 
     fill("black");
-    rect(0, 150, width, 50)
+    rect(0, 150, width, 50);
 
     fill("white");
     // The message variable will recive the message to print
