@@ -3,7 +3,20 @@ function setup() {
     background("black");
     noStroke();
 
-    // <<< Add your code here
+    fill("yellow");
+    rect(0, 0, width / 2, height / 2);
+
+    fill("red");
+    rect(width / 2, 0, width / 2, height / 2);
+
+    fill("green");
+    rect(0, height / 2, width / 2, height / 2);
+
+    fill("blue");
+    rect(width / 2, height / 2, width / 2, height / 2);
 }
 
-// <<< Add the function `moveClicked` with the required code here
+    function mouseClicked() {
+
+    }
+ 
