@@ -32,14 +32,23 @@ function setup() {
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 4 * 3, height / 4, dicePointDiameter);
     circle(width / 4, 3 * height / 4, dicePointDiameter);
-  }else if (dice === 5) {
+  } else if (dice === 5) {
     // One point in the left upper corner, one
     // in the lower right corner
     circle(width / 4, height / 4, dicePointDiameter);
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 4 * 3, height / 4, dicePointDiameter);
     circle(width / 4, 3 * height / 4, dicePointDiameter);
-
+    circle(width / 2, height / 2, dicePointDiameter);
+  } else if (dice === 6) {
+    // One point in the left upper corner, one
+    // in the lower right corner
+    circle(width / 4, height / 4, dicePointDiameter);
+    circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
+    circle(width / 4 * 3, height / 4, dicePointDiameter);
+    circle(width / 4, 3 * height / 4, dicePointDiameter);
+    circle(width / 4, height / 4 * 2, dicePointDiameter);
+    circle(3 * width / 4, 2 * height / 4, dicePointDiameter);
   }
 
 }
