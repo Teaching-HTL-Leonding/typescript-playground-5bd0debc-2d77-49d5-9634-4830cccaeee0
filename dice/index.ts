@@ -47,5 +47,4 @@ function setup() {
     circle(width / 4, height / 4 * 2, dicePointDiameter);
     circle(3 * width / 4, 2 * height / 4, dicePointDiameter);
   }
-
 }
