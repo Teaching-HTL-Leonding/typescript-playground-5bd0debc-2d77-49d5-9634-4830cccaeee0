@@ -21,5 +21,25 @@ function setup() {
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
   } else if (dice === 3) {
     // Draw three dots (combination of 1 and 2)
+    circle(width / 4, height / 4, dicePointDiameter);
+    circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
+    circle(width / 2, height / 2, dicePointDiameter);
   } /* ... add the other cases here */
+  else if (dice === 4) {
+    // One point in the left upper corner, one
+    // in the lower right corner
+    circle(width / 4, height / 4, dicePointDiameter);
+    circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
+    circle(width / 4 * 3, height / 4, dicePointDiameter);
+    circle(width / 4, 3 * height / 4, dicePointDiameter);
+  }else if (dice === 5) {
+    // One point in the left upper corner, one
+    // in the lower right corner
+    circle(width / 4, height / 4, dicePointDiameter);
+    circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
+    circle(width / 4 * 3, height / 4, dicePointDiameter);
+    circle(width / 4, 3 * height / 4, dicePointDiameter);
+
+  }
+
 }
