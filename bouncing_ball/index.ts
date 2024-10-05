@@ -6,6 +6,7 @@ const circleDiameter = 50;
 
 let circleCenterX = 0;
 let direction = 2;
+let circleCenterY = 0;
 
 // Remember: The _draw_ method is called FOR EVERY FRAME
 function draw() {
@@ -24,5 +25,14 @@ function draw() {
   if (circleCenterX >= width || circleCenterX <= 0) {
     // Reverse sign of direction (positive -> right, negative -> left)
     direction *= -1; 
+  }
+
+  fill("skyblue");
+  circle(width / 2, circleCenterY, circleDiameter);
+
+  circleCenterY += direction
+
+  if(circleCenterY >= 200 || circleCenterY <= height) {
+    direction *= +1;
   }
 }
