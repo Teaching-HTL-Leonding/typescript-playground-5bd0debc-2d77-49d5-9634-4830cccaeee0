@@ -26,23 +26,20 @@ function setup() {
     circle(width / 2, height / 2, dicePointDiameter);
   } /* ... add the other cases here */
   else if (dice === 4) {
-    // One point in the left upper corner, one
-    // in the lower right corner
+    // Draw four dots
     circle(width / 4, height / 4, dicePointDiameter);
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 4 * 3, height / 4, dicePointDiameter);
     circle(width / 4, 3 * height / 4, dicePointDiameter);
   } else if (dice === 5) {
-    // One point in the left upper corner, one
-    // in the lower right corner
+    // Draw four dots and one in the middle
     circle(width / 4, height / 4, dicePointDiameter);
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 4 * 3, height / 4, dicePointDiameter);
     circle(width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 2, height / 2, dicePointDiameter);
   } else if (dice === 6) {
-    // One point in the left upper corner, one
-    // in the lower right corner
+    // Draw six dots
     circle(width / 4, height / 4, dicePointDiameter);
     circle(3 * width / 4, 3 * height / 4, dicePointDiameter);
     circle(width / 4 * 3, height / 4, dicePointDiameter);
