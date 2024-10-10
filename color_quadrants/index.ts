@@ -29,7 +29,7 @@ function mouseClicked() {
     let message: string;
 
 
-    if (mouseX < width / 2 && mouseY < height / 2) {
+    if (mouseX <= width / 2 && mouseY < height / 2) {
         message = "Yellow"
     }
     else if(mouseX > width / 2 && mouseY < height / 2)  {
