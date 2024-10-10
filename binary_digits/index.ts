@@ -6,16 +6,16 @@ function setup() {
   let numWithoutLastDigit = Math.floor(num / 10);
 
   const digit2 = numWithoutLastDigit % 10
-  numWithoutLastDigit = Math.floor(num / 10);
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
   const digit3 = numWithoutLastDigit % 10;
-  numWithoutLastDigit = Math.floor(num / 10);
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
   const digit4 = numWithoutLastDigit % 10;
-  numWithoutLastDigit = Math.floor(num / 10);
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
   const digit5 = numWithoutLastDigit % 10;
-  numWithoutLastDigit = Math.floor(num / 10);
+  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 10);
 
   const digit6 = numWithoutLastDigit % 10;
   
