@@ -33,7 +33,7 @@ function draw() {
 
   circleCenterY += directionB
 
-  if (circleCenterY >= 200 || circleCenterY <= 0) {
+  if (circleCenterY >= height || circleCenterY <= 0) {
     directionB *= -1;
   }
 }
