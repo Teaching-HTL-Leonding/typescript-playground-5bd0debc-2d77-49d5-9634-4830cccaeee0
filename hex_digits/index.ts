@@ -9,19 +9,6 @@ function setup() {
   numWithoutLastDigit = Math.floor(numWithoutLastDigit / 2);
 
   const digit3 = numWithoutLastDigit % 2;
-  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 2);
-
-  const digit4 = numWithoutLastDigit % 2;
-  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 2);
-
-  const digit5 = numWithoutLastDigit % 2;
-  numWithoutLastDigit = Math.floor(numWithoutLastDigit / 2);
-
-  const digit6 = numWithoutLastDigit % 2;
-  
-
-
-  // Add the necessary code here
 
   textAlign(CENTER, CENTER);
   fill("yellow");
@@ -30,17 +17,11 @@ function setup() {
 
   noFill();
   stroke("gold");
-  rect(50, height / 2, 30, 50);
   rect(100, height / 2, 30, 50);
-  rect(150, height / 2, 30, 50);
   rect(200, height / 2, 30, 50);
-  rect(250, height / 2, 30, 50);
   rect(300, height / 2, 30, 50);
-
+  
   text(`${lastDigit}`, 315, height / 2 + 25);
-  text(`${digit2}`, 265, height / 2 + 25);
-  text(`${digit3}`, 215, height / 2 + 25);
-  text(`${digit4}`, 165, height / 2 + 25);
-  text(`${digit5}`, 115, height / 2 + 25);
-  text(`${digit6}`, 65, height / 2 + 25);
+  text(`${digit2}`, 215, height / 2 + 25);
+  text(`${digit3}`, 115, height / 2 + 25);
 }
