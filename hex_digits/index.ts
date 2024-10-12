@@ -43,6 +43,7 @@ function setup() {
   else {
     text(`${lastDigit}`, 315, height / 2 + 25);
   }
+  
 
   if (digit2 === 10) {
     text("A", 215, height / 2 + 25);
@@ -67,7 +68,25 @@ function setup() {
   }
 
 
-  
-
-  text(`${digit3}`, 115, height / 2 + 25);
+  if (digit3 === 10) {
+    text("A", 115, height / 2 + 25);
+  }
+  else if (digit3 === 11) {
+    text("B", 115, height / 2 + 25);
+  }
+  else if (digit3 === 12) {
+    text("C", 115, height / 2 + 25);
+  }
+  else if (digit3 === 13) {
+    text("D", 115, height / 2 + 25);
+  }
+  else if (digit3 === 14) {
+    text("E", 115, height / 2 + 25);
+  }
+  else if (digit3 === 15) {
+    text("F", 115, height / 2 + 25);
+  }
+  else {
+    text(`${digit3}`, 115, height / 2 + 25);
+  }
 }
