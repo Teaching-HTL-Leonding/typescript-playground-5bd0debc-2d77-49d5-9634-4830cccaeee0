@@ -43,7 +43,7 @@ function setup() {
   else {
     text(`${lastDigit}`, 315, height / 2 + 25);
   }
-  
+
 
   if (digit2 === 10) {
     text("A", 215, height / 2 + 25);
