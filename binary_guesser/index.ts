@@ -1,5 +1,5 @@
 let num = 0;
-let posmouse number = 0;
+let posmouse = 0;
 
 function setup() {
   num = Math.floor(random(0, 16));
@@ -21,7 +21,7 @@ function setup() {
 }
 
 function mouseClicked() {
-  if (50 < posmouse AND posmouse < 100){
+  if ((mouseX < 100) && (mouseX > 50)){
 
   }
 
