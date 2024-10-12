@@ -7,7 +7,7 @@ let digit1 = 0;
 let aktuellebinary = 0;
 
 function setup() {
-  num = Math.floor(random(0, 16));
+  num = Math.floor(random(1, 16));
 
   createCanvas(400, 300);
   background("black");
@@ -86,11 +86,27 @@ function mouseClicked() {
     fill("yellow");
     text(`${digit1}`, 315, height / 2);
   }
-  aktuellebinary = digit1 * Math.pow(2,0) + digit2 * Math.pow(2,1) + digit3 * Math.pow(2,2) + digit4 * Math.pow(2,3);
-  if (num === aktuellebinary){
-    textSize(30);
+  aktuellebinary = digit1 * Math.pow(2, 0) + digit2 * Math.pow(2, 1) + digit3 * Math.pow(2, 2) + digit4 * Math.pow(2, 3);
+  if (num === aktuellebinary) {
+    background("black");
+    textSize(25);
+    fill("yellow");
+  text(num + ` in binary?`, width / 2, 50);
     noStroke();
     fill("green");
-    text("Correct!", width / 2, 250)
+    text("Correct!", width / 2, 250);
+
+    noFill();
+    stroke("green");
+    rect(50, height / 2 - 40, 50, 80);
+    rect(130, height / 2 - 40, 50, 80);
+    rect(210, height / 2 - 40, 50, 80);
+    rect(290, height / 2 - 40, 50, 80);
+
+    fill("green");
+    text(`${digit4}`, 75, height / 2);
+    text(`${digit3}`, 155, height / 2);
+    text(`${digit2}`, 235, height / 2);
+    text(`${digit1}`, 315, height / 2);
   }
 } 
