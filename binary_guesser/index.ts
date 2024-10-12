@@ -4,6 +4,7 @@ let digit4 = 0;
 let digit3 = 0;
 let digit2 = 0;
 let digit1 = 0;
+let aktuellebinary = 0;
 
 function setup() {
   num = Math.floor(random(0, 16));
@@ -31,6 +32,7 @@ function setup() {
 }
 
 function mouseClicked() {
+
 
   if ((mouseX < 100) && (mouseX > 50) && (mouseY > (height / 2 - 40)) && (mouseY < (height / 2 + 80))) {
     digitclicked = 4;
@@ -84,4 +86,11 @@ function mouseClicked() {
     fill("yellow");
     text(`${digit1}`, 315, height / 2);
   }
-}
+  aktuellebinary = digit1 * Math.pow(2,0) + digit2 * Math.pow(2,1) + digit3 * Math.pow(2,2) + digit4 * Math.pow(2,3);
+  if (num === aktuellebinary){
+    textSize(30);
+    noStroke();
+    fill("green");
+    text("Correct!", width / 2, 250)
+  }
+} 
