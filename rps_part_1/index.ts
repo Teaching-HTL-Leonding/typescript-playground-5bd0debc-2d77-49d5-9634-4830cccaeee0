@@ -20,10 +20,11 @@ function setup() {
 
     // Display the icons for "stone", "paper", and "scissors".
     textSize(75);
-    // <<< Add your code here
-    text("🪨", )
+    text("🪨", STONE_LEFT, 150);
+    text("📃", PAPER_LEFT, 150);
+    text("✂️", SCISSORS_LEFT, 150);
 }
 
 function mouseMoved() {
-    // <<< Add your code here
+    if (mouseX < 25) && (mouseX > )
 }
