@@ -26,5 +26,13 @@ function setup() {
 }
 
 function mouseMoved() {
-    if (mouseX < 25) && (mouseX > )
+    noFill();
+    strokeWeight(4);
+
+    if ((mouseX > 25) && (mouseX < 125) && (mouseY > 75) && (mouseY < 175)){
+        stroke("yellow");
+        rect(50, 70, 100);
+    } else {stroke("black");
+    }
+
 }
