@@ -29,7 +29,7 @@ function mouseMoved() {
     noFill();
     strokeWeight(4);
 
-    if ((mouseX > 50) && (mouseX < 150) && (mouseY > 75) && (mouseY < 175)) {
+    if ((mouseX > 50) && (mouseX < 145) && (mouseY > 75) && (mouseY < 175)) {
         stroke("yellow");
     } else {
         stroke("black");
@@ -43,7 +43,7 @@ function mouseMoved() {
     }
     rect(PAPER_LEFT, ICON_TOP, ICON_HEIGHT, ICON_WIDTH);
 
-     if ((mouseX > 250) && (mouseX < 350) && (mouseY > 75) && (mouseY < 175)) {
+     if ((mouseX > 265) && (mouseX < 350) && (mouseY > 75) && (mouseY < 175)) {
         stroke("yellow");
     } else {
         stroke("black");
