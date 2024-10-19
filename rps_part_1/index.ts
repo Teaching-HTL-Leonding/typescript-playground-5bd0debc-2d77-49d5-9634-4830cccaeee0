@@ -29,10 +29,18 @@ function mouseMoved() {
     noFill();
     strokeWeight(4);
 
-    if ((mouseX > 25) && (mouseX < 125) && (mouseY > 75) && (mouseY < 175)){
+    if ((mouseX > 25) && (mouseX < 125) && (mouseY > 75) && (mouseY < 175)) {
         stroke("yellow");
-        rect(50, 70, 100);
-    } else {stroke("black");
+    } else {
+        stroke("black");
     }
+    rect(STONE_LEFT, ICON_TOP, ICON_HEIGHT, ICON_WIDTH);
+
+     if ((mouseX > 25) && (mouseX < 125) && (mouseY > 75) && (mouseY < 175)) {
+        stroke("yellow");
+    } else {
+        stroke("black");
+    }
+    rect(STONE_LEFT, ICON_TOP, ICON_HEIGHT, ICON_WIDTH);
 
 }
