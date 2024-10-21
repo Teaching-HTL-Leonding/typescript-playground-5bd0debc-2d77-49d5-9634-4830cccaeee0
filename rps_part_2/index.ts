@@ -64,5 +64,56 @@ function mouseMoved() {
 }
 
 function mouseClicked() {
-  // <<< Add code here to let the user choose an option and find out the winner
+ if (computer === "") {
+        // Check if the click is inside the area of the icons to select one.
+        const isInVertical = mouseY >= ICON_TOP && mouseY < ICON_TOP + ICON_HEIGHT;
+        if (isInVertical && mouseX >= STONE_LEFT && mouseX < STONE_LEFT + ICON_WIDTH) {
+            selected = "🪨"; // Player selects "stone".
+        }
+
+        if (isInVertical && mouseX >= PAPER_LEFT && mouseX < PAPER_LEFT + ICON_WIDTH) {
+            selected = "📃"; // Player selects "paper".
+        }
+
+        if (isInVertical && mouseX >= SCISSORS_LEFT && mouseX < SCISSORS_LEFT + ICON_WIDTH) {
+            selected = "✂️"; // Player selects "scissors".
+        }
+
+        // Generate a random number to determine the computer's choice.
+        const computerSymbolId = Math.floor(random(0, 3));
+        if (computerSymbolId === 0) {
+            computer = "🪨"; // Computer selects "stone".
+        } else if (computerSymbolId === 1) {
+            computer = "📃"; // Computer selects "paper".
+        } else if (computerSymbolId === 2) {
+            computer = "✂️"; // Computer selects "scissors".
+        }
+
+        // Display the computer's choice.
+        noStroke();
+        fill("yellow");
+        textSize(30);
+        text("Computer:", TEXT_LEFT, 300);
+        textSize(75);
+        text(computer, 175, 300);
+
+        // Determine the winner based on the player's and computer's selections.
+        let winner: string = "";
+        if (selected === computer) {
+            winner = "It's a tie!"; // Both chose the same, so it's a tie.
+        } else if (
+            (selected === "🪨" && computer === "✂️") || // Stone beats scissors.
+            (selected === "📃" && computer === "🪨") || // Paper beats stone.
+            (selected === "✂️" && computer === "📃")    // Scissors beat paper.
+        ) {
+            winner = "You win!"; // Player wins.
+        } else {
+            winner = "Computer wins!"; // Computer wins.
+        }
+
+        // Display the result of the game.
+        textSize(50);
+        fill("yellow");
+        text(winner, TEXT_LEFT, 450);
+    }
 }
