@@ -11,19 +11,21 @@ function preload() {
     case 0: colorname = "clubs"; break;
     case 1: colorname = "diamonds"; break;
     case 2: colorname = "hearts"; break;
-    case 3: colorname = "spades"; break;
+    default: colorname = "spades"; break;
   }
 
   // Generate random card (1 = Ace, 2 = 2, ..., 10 = 10, 11 = Jack, 12 = Queen, 13 = King)
   const cardIx = Math.floor(random(1, 14));
-  switch(colorIx) {
+  switch(cardIx) {
     case 1 : cardname = "A"; break;
     case 11 : cardname = "J"; break;
     case 12 : cardname = "Q"; break;
-    case
+    case 13 : cardname = "K"; break;
+    default : cardname = `${cardIx}`; break;
+
+    
+
   }
-
-
 }
 
 function setup() {
