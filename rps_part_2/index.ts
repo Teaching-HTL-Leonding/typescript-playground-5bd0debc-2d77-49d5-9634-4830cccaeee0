@@ -81,7 +81,7 @@ function mouseClicked() {
             selected = 3
         }
         if (computer === 1 && selected === 1 
-        computer = 2 && selected = 2
+        computer === 2 && selected = 2
         computer === 3 && selected === 3  ) {
             output = "It's a tie"
         }
@@ -91,7 +91,7 @@ function mouseClicked() {
             output = "you lose "
         }
        else if (computer === 3 && selected === 1 
-                computer = 1 && selected = 2
+                computer === 1 && selected === 2
         computer === 2 && selected === 3 ) {
             output = "you win "
         }
