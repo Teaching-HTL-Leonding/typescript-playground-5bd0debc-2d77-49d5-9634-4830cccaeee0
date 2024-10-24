@@ -23,9 +23,9 @@ function preload() {
     case 13 : cardname = "K"; break;
     default : cardname = `${cardIx}`; break;
 
-    
 
   }
+    cardImage = loadImage (`${BASE_URL}/${colorname}/${cardname}.png`);
 }
 
 function setup() {
