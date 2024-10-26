@@ -22,8 +22,6 @@ function mouseMoved(){
     
     mx = mouseX * 2;
     my = mouseY * 2;
-
-
 }
 
 
