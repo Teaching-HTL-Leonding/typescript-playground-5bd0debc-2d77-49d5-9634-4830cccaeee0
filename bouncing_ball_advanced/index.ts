@@ -12,6 +12,7 @@ function setup() {
 }
 
 function draw() {
+  background("green");
   fill("yellow");
   noStroke();
   circle(bx, by, 50);
@@ -19,13 +20,13 @@ function draw() {
   bx = bx + dx;
   by = by + dy;
 
-  if (by > 200) {
+  if (by > height) {
     dy = -1;
   }
   else if (by < 0) {
     dy = + 1;
   }
-  else if(bx > 300){
+  else if(bx > width){
     dx = -1;
   }
   else if(bx <0){
