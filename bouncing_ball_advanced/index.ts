@@ -4,7 +4,9 @@ let by: number = 0;
 let dx: number = 1;
 let dy: number = 1;
 
-const rad: number = 50;
+let rad: number = 50;
+
+let hs: number = 0;
 
 function setup() {
   createCanvas(300, 200);
@@ -18,25 +20,48 @@ function draw() {
   fill("yellow");
   noStroke();
   rect(bx, by, rad, rad);
+  fill("white");
+  stroke("black");
+  text(`Score: ${hs}`, 10, height - 10);
 
   bx = bx + dx;
   by = by + dy;
 
   if (by > height - rad) {
-    dy = -1;
+    dy = dy * -1;
   }
   else if (by < 0) {
-    dy = + 1;
+    dy = dy * -1;
   }
-  else if(bx > width - rad){
-    dx = -1;
+  else if (bx > width - rad) {
+    dx = dx * -1;
   }
-  else if(bx <0){
-    dx = +1
+  else if (bx < 0) {
+    dx = dx * -1;
   }
 }
 
-function mouseClicked(){
+function mouseClicked() {
+  if (mouseX > bx && mouseX < bx + rad && mouseY > by && mouseY < by + rad) {
+    // 1. punkte erhoehen
+    hs++;
+    // 2. rechteck kleiner machen
+    rad--;
+    // 3. geschwindigkeit erhoehen
 
+    if(dx > 0){
+      dx++;
+    }
+    else{
+      dx--;
+    }
+    if(dy > 0){
+      dy++;
+    }
+    else{
+      dy--;
+    }
+
+  }
 
 }
