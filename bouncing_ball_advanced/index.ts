@@ -8,15 +8,17 @@ let rad: number = 50;
 
 let hs: number = 0;
 
+let ba: string = "green";
+
 function setup() {
   createCanvas(300, 200);
-  background("green");
+  background(ba);
   bx = width / 2;
   by = height / 2;
 }
 
 function draw() {
-  background("green");
+  background(ba);
   fill("yellow");
   noStroke();
   rect(bx, by, rad, rad);
@@ -29,15 +31,19 @@ function draw() {
 
   if (by > height - rad) {
     dy = dy * -1;
+    ba = "green";
   }
   else if (by < 0) {
     dy = dy * -1;
+    ba = "green";
   }
   else if (bx > width - rad) {
     dx = dx * -1;
+    ba = "green";
   }
   else if (bx < 0) {
     dx = dx * -1;
+    ba = "green";
   }
 }
 
@@ -62,6 +68,9 @@ function mouseClicked() {
       dy--;
     }
 
+  }
+  else{
+    ba = "red";
   }
 
 }
