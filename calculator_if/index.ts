@@ -12,7 +12,9 @@ function setup() {
 
 function draw() {
     textAlign(CENTER, CENTER);
-    textSize(65);
+    textSize(55);
+    strokeWeight(2);
+    stroke("black");
     background("lightgray");
     noFill();
     rect(0, lineHeight, cellWidth, lineHeight);
@@ -69,10 +71,12 @@ function draw() {
     fill("black");
     text("C", cellWidth * 2, lineHeight * 4, cellWidth, lineHeight);
 
+    textAlign(RIGHT, CENTER);
     fill("white");
-    rect(10, 10, width - 20, lineHeight - 20);
+    noStroke();
+    rect(MARGIN_NUM, MARGIN_NUM, width - MARGIN_NUM * 2, lineHeight - MARGIN_NUM * 2);
     fill("black");
-    text("0", 0, lineHeight * 4, cellWidth * 2, lineHeight);
+    text(`${num}`, MARGIN_NUM, MARGIN_NUM, width - MARGIN_NUM * 3, lineHeight - MARGIN_NUM);
 
 
 }
