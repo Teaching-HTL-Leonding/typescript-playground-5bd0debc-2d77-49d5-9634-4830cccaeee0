@@ -78,14 +78,15 @@ function draw() {
     fill("black");
     text(`${num}`, MARGIN_NUM, MARGIN_NUM, width - MARGIN_NUM * 3, lineHeight - MARGIN_NUM);
 
-ö
+
+}
 
 function mouseClicked() {
 
     let gz: number = 0;
 
     switch(welcheBox){
-        case 0: gz = 7; break
+        case 0: gz = 7; break;
     }
 
     if (mouseX > 0 && mouseX <= cellWidth && mouseY > lineHeight && mouseY <= lineHeight * 2) {
