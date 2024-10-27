@@ -1,8 +1,8 @@
 const MARGIN_NUM = 10;
 
-let num: number = 0;          // Current number entered by the user
-let lineHeight: number = 0;   // Height of a line of the responsive layout
-let cellWidth: number = 0;    // Width of a cell of the responsive layout
+let num: number = 0;
+let lineHeight: number = 0;
+let cellWidth: number = 0;
 
 function setup() {
     createCanvas(300, 500);
@@ -11,126 +11,83 @@ function setup() {
 }
 
 function draw() {
-    textAlign(CENTER, CENTER);
-    textSize(55);
-    strokeWeight(2);
-    stroke("black");
     background("lightgray");
-    noFill();
-    rect(0, lineHeight, cellWidth, lineHeight);
-    fill("black");
-    text("7", 0, lineHeight, cellWidth, lineHeight);
 
-    noFill();
-    rect(cellWidth, lineHeight, cellWidth, lineHeight);
-    fill("black");
-    text("8", cellWidth, lineHeight, cellWidth, lineHeight);
+    noStroke();
+    fill("white");
+    rect(MARGIN_NUM, MARGIN_NUM, width - 2 * MARGIN_NUM, lineHeight - 2 * MARGIN_NUM);
 
-    noFill();
-    rect(cellWidth * 2, lineHeight, cellWidth, lineHeight);
+    stroke("black");
     fill("black");
-    text("9", cellWidth * 2, lineHeight, cellWidth, lineHeight);
-
-    noFill();
-    rect(0, lineHeight * 2, cellWidth, lineHeight);
-    fill("black");
-    text("4", 0, lineHeight * 2, cellWidth, lineHeight);
-
-    noFill();
-    rect(cellWidth, lineHeight * 2, cellWidth, lineHeight);
-    fill("black");
-    text("5", cellWidth, lineHeight * 2, cellWidth, lineHeight);
-
-    noFill();
-    rect(cellWidth * 2, lineHeight * 2, cellWidth, lineHeight);
-    fill("black");
-    text("6", cellWidth * 2, lineHeight * 2, cellWidth, lineHeight);
-
-    noFill();
-    rect(0, lineHeight * 3, cellWidth, lineHeight);
-    fill("black");
-    text("1", 0, lineHeight * 3, cellWidth, lineHeight);
-
-    noFill();
-    rect(cellWidth, lineHeight * 3, cellWidth, lineHeight);
-    fill("black");
-    text("2", cellWidth, lineHeight * 3, cellWidth, lineHeight);
-
-    noFill();
-    rect(cellWidth * 2, lineHeight * 3, cellWidth, lineHeight);
-    fill("black");
-    text("3", cellWidth * 2, lineHeight * 3, cellWidth, lineHeight);
-
-    noFill();
-    rect(0, lineHeight * 4, cellWidth * 2, lineHeight);
-    fill("black");
-    text("0", 0, lineHeight * 4, cellWidth * 2, lineHeight);
-
-    noFill();
-    rect(cellWidth * 2, lineHeight * 4, cellWidth, lineHeight);
-    fill("black");
-    text("C", cellWidth * 2, lineHeight * 4, cellWidth, lineHeight);
+    strokeWeight(2);
+    textSize(50);
 
     textAlign(RIGHT, CENTER);
-    fill("white");
-    noStroke();
-    rect(MARGIN_NUM, MARGIN_NUM, width - MARGIN_NUM * 2, lineHeight - MARGIN_NUM * 2);
-    fill("black");
-    text(`${num}`, MARGIN_NUM, MARGIN_NUM, width - MARGIN_NUM * 3, lineHeight - MARGIN_NUM);
+    text(num, width - MARGIN_NUM * 2, lineHeight / 2);
 
+    textAlign(CENTER, CENTER);
 
+    let y = lineHeight * 1;
+    line(0, y, width, y);
+    text('7', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
+    text('8', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
+    text('9', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
+
+    y += lineHeight;
+    line(0, y, width, y);
+    text('4', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
+    text('5', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
+    text('6', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
+
+    y += lineHeight;
+    line(0, y, width, y);
+    text('1', width / 3 * 0 + cellWidth / 2, y + lineHeight / 2);
+    text('2', width / 3 * 1 + cellWidth / 2, y + lineHeight / 2);
+    text('3', width / 3 * 2 + cellWidth / 2, y + lineHeight / 2);
+
+    y += lineHeight;
+    line(0, y, width, y);
+    text('0', cellWidth, y + lineHeight / 2);
+    text('C', cellWidth * 2.5, y + lineHeight / 2);
+    
+    let x = cellWidth * 1;
+    line(x, lineHeight, x, height - lineHeight);
+
+    x += cellWidth;
+    line(x, lineHeight, x, height);
 }
 
 function mouseClicked() {
+  if (mouseY > lineHeight && mouseY <= height && mouseX >= 0 && mouseX <= width) {
+    const clickedY = Math.floor((mouseY - lineHeight) / lineHeight);
+    const clickedX = Math.floor(mouseX / cellWidth);
+    
+    let digit: number = -1;
 
-    let gz: number = 0;
+    // <<< Turn all of the following if statements into switch statements
+    if (clickedY === 0) {
+        if (clickedX === 0) { digit = 7; }
+        else if (clickedX === 1) { digit = 8; }
+        else if (clickedX === 2) { digit = 9; }
+    } else if (clickedY === 1) {
+        if (clickedX === 0) { digit = 4; }
+        else if (clickedX === 1) { digit = 5; }
+        else if (clickedX === 2) { digit = 6; }
+    } else if (clickedY === 2) {
+        if (clickedX === 0) { digit = 1; }
+        else if (clickedX === 1) { digit = 2; }
+        else if (clickedX === 2) { digit = 3; }
+    } else if (clickedX !== 2) { digit = 0; }
+    // <<< =========================================== Until here
 
-    switch(welcheBox){
-        case 0: gz = 7; break;
-    }
-
-    if (mouseX > 0 && mouseX <= cellWidth && mouseY > lineHeight && mouseY <= lineHeight * 2) {
-        gz = 7;
-    }
-
-    if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight && mouseY <= lineHeight * 2) {
-        gz = 8;
-    }
-
-    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight && mouseY <= lineHeight * 2) {
-        gz = 9;
-    }
-
-    if (mouseX > 0 && mouseX <= cellWidth * 2 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
-        gz = 4;
-    }
-
-    if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
-        gz = 5;
-    }
-
-    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
-        gz = 6;
-    }
-
-    if (mouseX > 0 && mouseX <= cellWidth * 2 && mouseY > lineHeight * 3 && mouseY <= lineHeight * 4) {
-        gz = 1;
-    }
-
-    if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight * 3 && mouseY <= lineHeight * 4) {
-        gz = 2;
-    }
-
-    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight * 3 && mouseY <= lineHeight * 4) {
-        gz = 3;
-    }
-
-    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight * 4 && mouseY <= lineHeight * 5) {
+    if (digit === -1) {
         num = 0;
+    } else {
+        const oldNum = num;
+        num = num * 10 + digit;
+        if (num >= 1000000000) {
+            num = oldNum;
+        }
     }
-
-    if (mouseX > 0 && mouseX <= cellWidth * 2 && mouseY > lineHeight * 4 && mouseY <= lineHeight * 5) {
-        gz = 0;
-    }
-    num = num * 10 + gz;
+  }
 }
