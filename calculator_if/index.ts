@@ -82,5 +82,39 @@ function draw() {
 }
 
 function mouseClicked() {
-    // <<< Add code here
+
+    let gz: number
+
+    if (mouseX > 0 && mouseX <= cellWidth && mouseY > lineHeight && mouseY <= lineHeight * 2) {
+        gz = 7;
+    }
+
+    if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight && mouseY <= lineHeight * 2) {
+        gz = 8;
+    }
+
+    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight && mouseY <= lineHeight * 2) {
+        gz = 9;
+    }
+
+    if (mouseX > 0 && mouseX <= cellWidth * 2 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
+        gz = 4;
+    }
+
+    if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
+        gz = 5;
+    }
+
+    if (mouseX > cellWidth * 2 && mouseX <= cellWidth * 3 && mouseY > lineHeight * 2 && mouseY <= lineHeight * 3) {
+        gz = 6;
+    }
+
+    if (mouseX > 0 && mouseX <= cellWidth * 2 && mouseY > lineHeight * 3 && mouseY <= lineHeight * 4) {
+        gz = 1;
+    }
+     if (mouseX > cellWidth && mouseX <= cellWidth * 2 && mouseY > lineHeight * 3 && mouseY <= lineHeight * 4) {
+        gz = 2;
+    }
+
+    num = num * 10 + gz;
 }
