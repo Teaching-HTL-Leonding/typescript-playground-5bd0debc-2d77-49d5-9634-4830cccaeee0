@@ -57,13 +57,39 @@ function setup() {
     // Text unten
     text(`${randnum3}`, width / 6 - 40, height / 2 + 15);
     text(`${randnum4}`, width / 6 * 3 - 25, height / 2 + 15);
-    text(`${randnum5}`, width / 6 * 5 - 10, height / 2 + 15);
+    text(`${randnum5}`, width / 6 * 5 - 20, height / 2 + 15);
 
 }
 
 // mouseClicked function checks if the user clicked on the correct answer
 function mouseClicked() {
-    // <<< TODO: Add your code here
+    if (mouseX > 28 && mouseX < 81 && mouseY > 170 && mouseY < 220 && randnum3 === correct) {
+        fill("green");
+        textSize(50);
+        text(`${correct} ist richtig!`, width / 2 - 150, height - 100);
+    } else if(mouseX > 28 && mouseX < 81 && mouseY > 170 && mouseY < 220 && randnum3 !== correct) {
+        fill("red");
+        textSize(50);
+        text(`${randnum3}ist falsch!`, width / 2 - 150, height - 100);
+    }
+    if (mouseX > 179 && mouseX < 233 && mouseY > 170 && mouseY < 220 && randnum4 === correct) {
+        fill("green");
+        textSize(50);
+        text(`${correct} ist richtig!`, width / 2 - 150, height - 100);
+    } else if(mouseX > 179 && mouseX < 233 && mouseY > 170 && mouseY < 220 && randnum4 !== correct) {
+        fill("red");
+        textSize(50);
+        text(`${randnum4}ist falsch!`, width / 2 - 150, height - 100);
+    }
+    if (mouseX > 320 && mouseX < 376 && mouseY > 170 && mouseY < 220 && randnum5 === correct) {
+        fill("green");
+        textSize(50);
+        text(`${correct} ist richtig!`, width / 2 - 150, height - 100);
+    } else if(mouseX > 320 && mouseX < 376 && mouseY > 170 && mouseY < 220 && randnum5 !== correct){
+        fill("red");
+        textSize(50);
+        text(`ist falsch!`, width / 2 - 150, height - 100);
+    }
 }
 
 // mouseMoved function displays mouse coordinates as feedback
