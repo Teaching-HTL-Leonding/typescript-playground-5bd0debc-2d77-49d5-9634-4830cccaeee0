@@ -2,11 +2,32 @@
 // of a randomly generated arithmetic operation.
 
 // <<< TODO: Declare your GLOBAL variables here
+let randnum1 = 0;
+let randnum2 = 0;
+let randtext1 = 0;
+let randtext2 = 0;
+let randtext3 = 0;
+
 
 // setup function runs once and sets up the quiz elements on the canvas
 function setup() {
+    randnum1 = Math.floor(random(1, 101));
+    randnum2 = Math.floor(random(1, 101));
+
+    //randtext = Math.random(+, *, -);
+
     createCanvas(400, 400);
     background("black");
+
+    fill("yellow");
+    textSize(50);
+    text(`${randnum1} - ${randnum2}`, width / 2 - 75, 50);
+
+    if(){
+        
+    }
+
+
 
     // <<< TODO: Add your code here
 }
