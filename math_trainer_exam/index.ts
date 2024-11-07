@@ -4,9 +4,10 @@
 // <<< TODO: Declare your GLOBAL variables here
 let randnum1 = 0;
 let randnum2 = 0;
-let randtext1 = 0;
+
+/*let randtext1 = 0;
 let randtext2 = 0;
-let randtext3 = 0;
+let randtext3 = 0;*/
 
 
 // setup function runs once and sets up the quiz elements on the canvas
@@ -23,8 +24,13 @@ function setup() {
     textSize(50);
     text(`${randnum1} - ${randnum2}`, width / 2 - 75, 50);
 
-    if(){
-        
+    const dice = Math.floor(random(1, 4));
+
+    let message: string; 
+    if (dice === 1) { message = "+"; }
+    else if (dice === 2) { message = "-"; }
+    else if (dice === 3) { message = "*"; }
+
     }
 
 
