@@ -70,7 +70,7 @@ function mouseClicked() {
     } else if(mouseX > 28 && mouseX < 81 && mouseY > 170 && mouseY < 220 && randnum3 !== correct) {
         fill("red");
         textSize(50);
-        text(`${randnum3}ist falsch!`, width / 2 - 150, height - 100);
+        text(`${randnum3} ist falsch!`, width / 2 - 150, height - 100);
     }
     if (mouseX > 179 && mouseX < 233 && mouseY > 170 && mouseY < 220 && randnum4 === correct) {
         fill("green");
@@ -79,7 +79,7 @@ function mouseClicked() {
     } else if(mouseX > 179 && mouseX < 233 && mouseY > 170 && mouseY < 220 && randnum4 !== correct) {
         fill("red");
         textSize(50);
-        text(`${randnum4}ist falsch!`, width / 2 - 150, height - 100);
+        text(`${randnum4} ist falsch!`, width / 2 - 150, height - 100);
     }
     if (mouseX > 320 && mouseX < 376 && mouseY > 170 && mouseY < 220 && randnum5 === correct) {
         fill("green");
@@ -88,7 +88,7 @@ function mouseClicked() {
     } else if(mouseX > 320 && mouseX < 376 && mouseY > 170 && mouseY < 220 && randnum5 !== correct){
         fill("red");
         textSize(50);
-        text(`ist falsch!`, width / 2 - 150, height - 100);
+        text(`${randnum5} ist falsch!`, width / 2 - 150, height - 100);
     }
 }
 
