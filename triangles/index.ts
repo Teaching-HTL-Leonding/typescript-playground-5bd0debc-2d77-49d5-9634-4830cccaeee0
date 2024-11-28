@@ -16,8 +16,9 @@ function setup() {
     // <<< Add code to draw the triangles here
     for (let i = 0; i <= SIZE; i += SIDE_LENGTH) {
         push();
+        translate(-SIDE_LENGTH / 2, -SIDE_LENGTH, 0)
         for (let o = 0; o <= SIZE; o += SIDE_LENGTH) {
-            triangle(0, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH / 2, 0);
+            triangle(0, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH, SIDE_LENGTH / 2 , 0);
             translate(SIDE_LENGTH, 0);
         }
 
