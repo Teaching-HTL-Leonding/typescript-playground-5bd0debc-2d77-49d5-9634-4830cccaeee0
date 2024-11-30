@@ -1,26 +1,26 @@
 function setup() {
     const SIZE = 425; // Canvas size
     const GRID = 25;  // Size of the squares
-    let xyellow = GRID
-    let yyellow = GRID
-    let xgreen = SIZE - GRID * 2
-    let ygreen = GRID
+
     createCanvas(SIZE, SIZE);
     background("black");
 
     noStroke();
-    while (xyellow < SIZE - GRID && yyellow < SIZE - GRID) {
-        fill("yellow")
-        rect(xyellow, yyellow, GRID, GRID)
-        xyellow += 25
-        yyellow += GRID
+
+    // <<< Add your code here
+    let i = GRID;
+    while (i < SIZE - GRID) {
+        fill("yellow");
+        rect(i, i, GRID, GRID);
+        i += GRID;
     }
 
-    while (xgreen >= GRID && ygreen < SIZE - GRID) {
-        fill("lime")
-        rect(xgreen, ygreen, GRID, GRID)
-        xgreen -= 25
-        ygreen += GRID
+    let j = SIZE - GRID * 2;
+    let y = GRID;
+    while (j >= GRID) {
+        fill("green");
+        rect(j, y, GRID, GRID);
+        j += -GRID;
+        y += GRID;
     }
-    // <<< Add your code here
 }
