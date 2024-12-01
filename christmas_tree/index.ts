@@ -36,7 +36,7 @@ function setup() {
     translate(0, DreieckBreite / 2);
     DreieckBreite *= 1.5;
   }
-  translate(width / 2, )
+  translate(width / 2, DreieckBreite / 2 + 37.5);
   fill("brown");
   rect(-25, 0, 50, 50);
 }
