@@ -14,10 +14,13 @@ function setup() {
   noStroke();
 
   // <<< Draw the tree
+  let DreieckBreite = INITIAL_TRIANGLE_BASE_WIDTH / 2;
   for (let i = 1; i <= 4; i += 1) {
-    triangle(width / 2 - INITIAL_TRIANGLE_BASE_WIDTH / 2, TOP_MARGIN + INITIAL_TRIANGLE_BASE_WIDTH / 2,  //x1 y1
-      width / 2 + INITIAL_TRIANGLE_BASE_WIDTH / 2, TOP_MARGIN + INITIAL_TRIANGLE_BASE_WIDTH / 2,   // x2 y2
+    triangle(width / 2 - DreieckBreite, TOP_MARGIN + DreieckBreite,  //x1 y1
+      width / 2 + DreieckBreite, TOP_MARGIN + DreieckBreite,   // x2 y2
       width / 2, TOP_MARGIN);   // x3 y3
-    translate(0, INITIAL_TRIANGLE_BASE_WIDTH / 2);
+    translate(0, DreieckBreite / 1.5);
+    DreieckBreite *= 1.5;
+
   }
 }
