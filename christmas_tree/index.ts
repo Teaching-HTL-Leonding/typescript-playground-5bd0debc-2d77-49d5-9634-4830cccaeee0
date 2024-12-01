@@ -19,8 +19,13 @@ function setup() {
     triangle(width / 2 - DreieckBreite, TOP_MARGIN + DreieckBreite,  //x1 y1
       width / 2 + DreieckBreite, TOP_MARGIN + DreieckBreite,   // x2 y2
       width / 2, TOP_MARGIN);   // x3 y3
-    translate(0, DreieckBreite / 1.5);
-    DreieckBreite *= 1.5;
+    
+    fill(Math.floor(random(0, 255)), Math.floor(random(0, 255)), Math.floor(random(0, 255)));
+        circle(width / 2 - DreieckBreite, TOP_MARGIN + DreieckBreite + SPHERE_DIAMETER / 2, SPHERE_DIAMETER);
+        circle(width / 2 + DreieckBreite, TOP_MARGIN + DreieckBreite + SPHERE_DIAMETER / 2, SPHERE_DIAMETER);
 
+    fill("green");
+    translate(0, DreieckBreite / 2);
+    DreieckBreite *= 1.5;
   }
 }
