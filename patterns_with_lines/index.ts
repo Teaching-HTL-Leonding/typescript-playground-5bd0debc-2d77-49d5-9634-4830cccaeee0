@@ -16,6 +16,7 @@ function mouseMoved() {
     strokeWeight(2);
 
     noFill();
+    
     stroke("aqua");
 
     // <<< Add your code here
@@ -37,6 +38,7 @@ function mouseMoved() {
     }
 
     let x = Math.round(mouseX);
+    let y = Math.round(mouseX / width * 100);
 
     resetMatrix();
     noStroke();
@@ -45,7 +47,8 @@ function mouseMoved() {
 
     fill("white");
     textSize(12);
-    text(`${x} of 601`,0, 290, 601);
+    textAlign(LEFT, BOTTOM);
+    text(`${x} of 601 = ${y}%`,0, 295, 601);
 
 }
 
