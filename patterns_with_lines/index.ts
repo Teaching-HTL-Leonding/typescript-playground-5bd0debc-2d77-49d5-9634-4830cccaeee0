@@ -26,6 +26,7 @@ function mouseMoved() {
         line(10, 5, 0, 10);
 
         translate(0, 10);
+
         push();
         for (let i = 0; i <= 600; i++) {
 
@@ -33,7 +34,8 @@ function mouseMoved() {
             line(10, 5, 0, 10);
 
             translate(10, 0);
-        } pop();
+        } 
+        pop();
     }
 }
 
