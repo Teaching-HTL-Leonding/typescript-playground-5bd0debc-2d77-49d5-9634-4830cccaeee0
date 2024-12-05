@@ -29,7 +29,7 @@ function mouseMoved() {
         push();
         for (let i = 0; i <= width; i++) {
 
-        stroke(i += 10, i + 360 , 60 + i);
+            stroke(i += 5, i + 360, 60 + i);
             line(0, 0, 10, 5);
             line(10, 5, 0, 10);
 
