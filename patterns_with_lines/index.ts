@@ -22,7 +22,7 @@ function mouseMoved() {
     // <<< Add your code here
 
     for (let i = 0; i <= height; i++) {
-        stroke(i, i + 360, 100);
+        stroke(i += 10, i + 360 , 60 + i);
         translate(0, 10);
         line(0, 0, 10, 5);
         line(10, 5, 0, 10);
