@@ -16,19 +16,19 @@ function mouseMoved() {
     strokeWeight(2);
 
     noFill();
-    
+
     stroke("aqua");
 
     // <<< Add your code here
 
-    for (let i = 0; i <= height; i++){
+    for (let i = 0; i <= height; i++) {
         translate(0, 10);
 
         line(0, 0, 10, 5);
         line(10, 5, 0, 10);
 
         push();
-        for (let i = 0; i <= width; i++){
+        for (let i = 0; i <= width; i++) {
 
             line(0, 0, 10, 5);
             line(10, 5, 0, 10);
@@ -48,7 +48,7 @@ function mouseMoved() {
     fill("white");
     textSize(12);
     textAlign(LEFT, BOTTOM);
-    text(`${x} of 601 = ${y}%`,0, 295, 601);
+    text(`${x} of 601 = ${y}%`, 0, 295, 601);
 
 }
 
