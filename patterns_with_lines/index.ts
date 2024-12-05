@@ -20,22 +20,33 @@ function mouseMoved() {
 
     // <<< Add your code here
 
-    for (let i = 0; i <= 301; i++) {
+    for (let i = 0; i <= height; i++){
+        translate(0, 10);
 
         line(0, 0, 10, 5);
         line(10, 5, 0, 10);
 
-        translate(0, 10);
-
         push();
-        for (let i = 0; i <= 600; i++) {
+        for (let i = 0; i <= width; i++){
 
             line(0, 0, 10, 5);
             line(10, 5, 0, 10);
 
             translate(10, 0);
-        } 
-        pop();
+        } pop();
     }
+
+    let x = Math.round(mouseX);
+
+    resetMatrix();
+    noStroke();
+    fill("black");
+    rect(0, 280, 601);
+
+    fill("white");
+    textSize(12);
+    text(`${x} of 601`,0, 290, 601);
+
 }
+
 
