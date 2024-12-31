@@ -77,6 +77,16 @@ function setup() {
   rect(10, 5, 80, 60);
 
   // <<< Add your code to draw the player numbers and names here
-
+  textSize(4);
+  fill("orange");
+  textAlign(RIGHT);
+  for (let i = 0; i < playerNumbers.length; i++) {
+    text(`${playerNumbers[i]}`, 30, 12 + i * 5);
+  }
+  fill("yellow");
+  textAlign(LEFT);
+  for (let i = 0; i < firstNames.length; i++){
+    text(`${firstNames[i]} ${lastNames[i]}`, 33, 12 + i * 5);
+  }
   pop();
 }
