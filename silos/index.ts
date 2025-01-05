@@ -30,7 +30,6 @@ const down_x: number[] = [];
 function setup() {
   createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
 
-  // <<< Add your code here
   let num = 0;
   for (let i = 0; i < INITIAL_FILL.length; i++) {
     if (INITIAL_FILL[i] === ",") {
