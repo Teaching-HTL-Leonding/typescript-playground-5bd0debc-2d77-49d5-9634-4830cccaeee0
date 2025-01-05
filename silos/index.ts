@@ -51,8 +51,25 @@ function setup() {
 
 function draw() {
   background("black");
-
-  // <<< Add your code here
+  // fill level
+  textAlign(CENTER);
+  fill("yellow");
+  textSize(15);
+  noStroke
+  for (let i = 0; i < INITIAL_FILL.length; i++) {
+    text(`${silos[i]}`, silos_x[i] + SILO_WIDTH / 2, SILOS_TOP + SILO_HEIGHT + 35);
+  }
+  // silos zeichnen
+  stroke("yellow");
+  strokeWeight(2);
+  for(let j = 0; j < INITIAL_FILL.length; j++){
+  line(silos_x[j], SILOS_TOP, silos_x[j], SILOS_TOP + SILO_HEIGHT);
+  line(silos_x[j], SILOS_TOP + SILO_HEIGHT, silos_x[j] + SILO_WIDTH, SILOS_TOP + SILO_HEIGHT);
+  line(silos_x[j] + SILO_WIDTH, SILOS_TOP + SILO_HEIGHT, silos_x[j] + SILO_WIDTH, SILOS_TOP);
+  }
+  fill("green");
+  noStroke();
+  rect(silos_x[0], SILOS_TOP, SILO_WIDTH, SILO_HEIGHT);
 }
 
 function mouseClicked() {
