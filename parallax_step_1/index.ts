@@ -23,4 +23,3 @@ function draw() {
     for (let i = 0; i < backgroundImages.length; i++)
         image(backgroundImages[i], 0, 0, scaledImagesWidth, scaledImagesHeight)
 }
-hat Kontextmenü
