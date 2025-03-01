@@ -71,8 +71,19 @@ function draw() {
         drawTrainWagon(train[ix], ix);
     }
 }
+//suche das passende Bild zur Abkürzung
+function getWagonIndex(abkurzung: string) {
+    let rueckgabeindex = 0;
+    for (rueckgabeindex; rueckgabeindex < abbreviations.length; rueckgabeindex++) {
+        if (abbreviations[rueckgabeindex] = abkurzung) {
+            return rueckgabeindex;
 
-// <<< Add additional functions here
+        }
+
+    }
+    return -1;
+
+}
 
 /** Draw a railroad segment */
 function drawRailroad(ix: number) {
