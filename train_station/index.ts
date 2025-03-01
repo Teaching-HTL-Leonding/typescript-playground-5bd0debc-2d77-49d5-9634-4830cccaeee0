@@ -33,25 +33,9 @@ function preload() {
 }
 
 function setup() {
-    background("#f0f0f0");
+   createCanvas(800, 550);
+   train = parseTrain(TRAIN);
 
-    scale(0.5, 0.5);
-
-    translate(850, -100);
-
-    for (const track of trains) {
-        for (let i = 0; i < 5; i++) {
-            drawRailroad(i);
-        }
-
-        let ix = 0;
-        for (const wagon of track) {
-            drawTrainWagon(wagon, ix);
-            ix++;
-        }
-
-        translate(125, 100);
-    }
 }
 
 function draw() {
@@ -71,7 +55,7 @@ function draw() {
         drawTrainWagon(train[ix], ix);
     }
 }
-//suche das passende Bild zur Abkürzung
+//suche den passenden Bildindex zur Abkürzung
 function getWagonIndex(abkurzung: string) {
     let rueckgabeindex = 0;
     for (rueckgabeindex; rueckgabeindex < abbreviations.length; rueckgabeindex++) {
