@@ -72,6 +72,7 @@ function getWagonIndex(abkurzung: string) {
 function parseTrain(abkuerzungen: string) {
     let tempabkurzung: string = "";
     let ausgabebilder: p5.Image[] = [];
+    //let aktuellesBild: p5.Image[] = [];
     let bilddateiname: string = "";
     for (let i = 0; i < abkuerzungen.length; i++) {
         if (abkuerzungen[i] === ",") {
@@ -86,8 +87,9 @@ function parseTrain(abkuerzungen: string) {
     //bild für die letzte abkürzung im string noch dazu fügen
     bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
     const image = loadImage(`${BASE_URL}/${bilddateiname}`);
-    ausgabebilder.concat (image, ausgabebilder);
-    //ausgabebilder.push(image);
+    //aktuellesBild.push(image);
+    //ausgabebilder.concat (aktuellesBild, ausgabebilder);
+    ausgabebilder.push(image);
     tempabkurzung = "";
 
     return ausgabebilder
