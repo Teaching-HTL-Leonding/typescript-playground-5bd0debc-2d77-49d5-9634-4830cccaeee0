@@ -75,7 +75,7 @@ function draw() {
 function getWagonIndex(abkurzung: string) {
     let rueckgabeindex = 0;
     for (rueckgabeindex; rueckgabeindex < abbreviations.length; rueckgabeindex++) {
-        if (abbreviations[rueckgabeindex] = abkurzung) {
+        if (abbreviations[rueckgabeindex] === abkurzung) {
             return rueckgabeindex;
 
         }
@@ -83,6 +83,29 @@ function getWagonIndex(abkurzung: string) {
     }
     return -1;
 
+}
+
+function parseTrain(abkuerzungen: string) {
+    let tempabkurzung: string = "";
+    let ausgabebilder: p5.Image[] = [];
+    let bilddateiname: string = "";
+    for (let i = 0; i < abkuerzungen.length; i++) {
+        if (abkuerzungen[i] === ",") {
+            bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
+            const image = loadImage(`${BASE_URL}/${bilddateiname}`);
+            ausgabebilder.push(image);
+            tempabkurzung = "";
+        } else {
+            tempabkurzung = tempabkurzung + abkuerzungen[i];
+        }
+    }
+    //bild für die letzte abkürzung im string noch dazu fügen
+    bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
+    const image = loadImage(`${BASE_URL}/${bilddateiname}`);
+    ausgabebilder.push(image);
+    tempabkurzung = "";
+
+    return ausgabebilder
 }
 
 /** Draw a railroad segment */
