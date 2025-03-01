@@ -5,6 +5,7 @@ const WAGON_WIDTH = 160;
 const WAGON_HEIGHT = 113;
 
 let railroad: p5.Image;
+const trainCars: p5.Image[] = [];
 
 /** Array of wagons for train (for base requirements) */
 let train: p5.Image[] = [];
@@ -26,21 +27,31 @@ function preload() {
     railroad = loadImage(`${BASE_URL}/railroad-straight.png`);
 
     for (let t of imageUrls) {
-        let image = loadImage(`${BASE_URL}/${t}`);
-        train.push(image)
-
+        const image = loadImage(`${BASE_URL}/${t}`);
+        trainCars.push(image);
     }
-
-    // <<< Add code to load all images (see imageUrls in wagons.ts).
-    //     Add the images to the train array. After loading all image,
-    //     the length of the train array must be equal to the length of imageUrls.
 }
 
 function setup() {
-    createCanvas(800, 550);
+    background("#f0f0f0");
 
-    // <<< Add code to parse the TRAIN string and store the result in the 
-    //     train array (base requirements) or the trains array (ADVANCED requirements).
+    scale(0.5, 0.5);
+
+    translate(850, -100);
+
+    for (const track of trains) {
+        for (let i = 0; i < 5; i++) {
+            drawRailroad(i);
+        }
+
+        let ix = 0;
+        for (const wagon of track) {
+            drawTrainWagon(wagon, ix);
+            ix++;
+        }
+
+        translate(125, 100);
+    }
 }
 
 function draw() {
@@ -60,20 +71,7 @@ function draw() {
         drawTrainWagon(train[ix], ix);
     }
 }
-function getWagonIndex(wagonsn: string): number {
-    for (let i = 0; i < wagonsn.length; i++) {
-        if (wagonsn === wagonsn[i]) {
-            return i;
-        }
-        else {
-            return -1
-        }
-        
-    }
-}
-function parseTrain(){
 
-}
 // <<< Add additional functions here
 
 /** Draw a railroad segment */
