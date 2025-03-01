@@ -77,7 +77,7 @@ function parseTrain(abkuerzungen: string) {
         if (abkuerzungen[i] === ",") {
             bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
             const image = loadImage(`${BASE_URL}/${bilddateiname}`);
-            ausgabebilder.push(image);
+            ausgabebilder.unshift(image);
             tempabkurzung = "";
         } else {
             tempabkurzung = tempabkurzung + abkuerzungen[i];
@@ -86,7 +86,7 @@ function parseTrain(abkuerzungen: string) {
     //bild für die letzte abkürzung im string noch dazu fügen
     bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
     const image = loadImage(`${BASE_URL}/${bilddateiname}`);
-    ausgabebilder.push(image);
+    ausgabebilder.unshift(image);
     tempabkurzung = "";
 
     return ausgabebilder
