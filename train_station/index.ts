@@ -36,7 +36,7 @@ function preload() {
 function setup() {
     createCanvas(800, 550);
 
-    trains = parseTrack(TRAIN)
+    trains = parseTrack(TRACKS);
 
 }
 
@@ -97,20 +97,20 @@ function parseTrain(abkuerzungen: string): p5.Image[] {
 
 function parseTrack(tracks: string): p5.Image[][] {
 
-    const result: p5.Image[][] = [];
+    const end: p5.Image[][] = [];
 
     let track = "";
     for (let a = 0; a < tracks.length; a++) {
         if (tracks[a] === ";") {
-            result.push(parseTrain(track));
+            end.push(parseTrain(track));
             track = "";
         } else {
             track += tracks[a];
         }
     }
 
-    result.push(parseTrain(track));
-    return result;
+    end.push(parseTrain(track));
+    return end;
 }
 
 
