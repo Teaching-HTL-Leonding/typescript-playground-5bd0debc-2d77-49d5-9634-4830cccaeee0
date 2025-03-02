@@ -30,11 +30,13 @@ function preload() {
         const image = loadImage(`${BASE_URL}/${t}`);
         trainCars.push(image);
     }
+
 }
 
 function setup() {
-   createCanvas(800, 550);
-   train = parseTrain(TRAIN);
+    createCanvas(800, 550);
+
+    trains = parseTrack(TRAIN)
 
 }
 
@@ -47,29 +49,30 @@ function draw() {
 
     // <<< Change this code accordingly for ADVANCED requirements
 
-    for (let i = 0; i < 5; i++) {
-        drawRailroad(i);
-    }
-
-    for (let ix = 0; ix < train.length; ix++) {
-        drawTrainWagon(train[ix], ix);
-    }
-}
-//suche den passenden Bildindex zur Abkürzung
-function getWagonIndex(abkurzung: string) {
-    let rueckgabeindex = 0;
-    for (rueckgabeindex; rueckgabeindex < abbreviations.length; rueckgabeindex++) {
-        if (abbreviations[rueckgabeindex] === abkurzung) {
-            return rueckgabeindex;
-
+    for (const track of trains) {
+        for (let i = 0; i < 5; i++) {
+            drawRailroad(i);
         }
 
-    }
-    return -1;
+        let ix = 0;
+        for (const wagon of track) {
+            drawTrainWagon(wagon, ix);
+            ix++;
+        }
 
+        translate(125, 100);
 }
-
-function parseTrain(abkuerzungen: string) {
+}
+// gets index of picture
+function getWagonIndex(al: string): number {
+    let rueckgabeindex = 0;
+    for (rueckgabeindex; rueckgabeindex < abbreviations.length; rueckgabeindex++) {
+        if (abbreviations[rueckgabeindex] === al) {
+            return rueckgabeindex;
+        }
+    }
+}
+function parseTrain(abkuerzungen: string): p5.Image[] {
     let tempabkurzung: string = "";
     let ausgabebilder: p5.Image[] = [];
     let bilddateiname: string = "";
@@ -83,7 +86,6 @@ function parseTrain(abkuerzungen: string) {
             tempabkurzung = tempabkurzung + abkuerzungen[i];
         }
     }
-    //bild für die letzte abkürzung im string noch dazu fügen
     bilddateiname = imageUrls[getWagonIndex(tempabkurzung)];
     const image = loadImage(`${BASE_URL}/${bilddateiname}`);
     ausgabebilder.unshift(image);
@@ -91,6 +93,26 @@ function parseTrain(abkuerzungen: string) {
 
     return ausgabebilder
 }
+
+
+function parseTrack(tracks: string): p5.Image[][] {
+
+    const result: p5.Image[][] = [];
+
+    let track = "";
+    for (let a = 0; a < tracks.length; a++) {
+        if (tracks[a] === ";") {
+            result.push(parseTrain(track));
+            track = "";
+        } else {
+            track += tracks[a];
+        }
+    }
+
+    result.push(parseTrain(track));
+    return result;
+}
+
 
 /** Draw a railroad segment */
 function drawRailroad(ix: number) {
