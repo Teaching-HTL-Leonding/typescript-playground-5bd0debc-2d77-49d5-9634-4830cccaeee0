@@ -215,7 +215,7 @@ function getCounts(hand: string[]): number[] {
 
         numberofarray[parseInt(hand[i][0])];
         }
-        return[0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        return numberofarray;
     }
 
     /**
