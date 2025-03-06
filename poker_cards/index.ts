@@ -20,7 +20,7 @@ function setup() {
     //                 +---------- Change this line to test different hands
     //                 |           (e.g. royalFlush, straightFlush, fourOfAKind, ...)
     //                 v
-    const handString = random;
+    const handString = highCard;
 
     hand = splitCardsString(handString);
 }
@@ -105,23 +105,23 @@ function splitCardsString(cards: string): string[] {
 function getCardValue(card: string): number {
     if (card[0] === "0") {
         return 10;
-    }else if (card[1] === "1") {
+    } else if (card[0] === "1") {
         return 1;
-    }else if (card[2] === "2") {
+    } else if (card[0] === "2") {
         return 2;
-    }else if (card[3] === "3") {
+    } else if (card[0] === "3") {
         return 3;
-    }else if (card[4] === "4") {
+    } else if (card[0] === "4") {
         return 4;
-    }else if (card[5] === "5") {
+    } else if (card[0] === "5") {
         return 5;
-    }else if (card[6] === "6") {
+    } else if (card[0] === "6") {
         return 6;
-    }else if (card[7] === "7") {
+    } else if (card[0] === "7") {
         return 7;
-    }else if (card[8] === "8") {
+    } else if (card[0] === "8") {
         return 8;
-    }else{
+    } else {
         return 9;
     }
 
@@ -142,8 +142,17 @@ function getCardValue(card: string): number {
 * before to get the value of the card.
 */
 function getCardDescription(card: string): string {
-
-    return `${getCardValue(card)} of UNKNOWN`;
+    let name = ""
+    if (card[1] === "H") {
+        name += "hearts"
+    } if (card[1] === "D") {
+        name += "diamonds"
+    } if (card[1] === "S") {
+        name += "spades"
+    } if (card[1] === "C") {
+        name += "clubs"
+    }
+    return `${getCardValue(card)} of ${name}`;
 }
 
 /**
@@ -158,7 +167,7 @@ function getCardDescription(card: string): string {
 function getHighestCard(hand: string[]): string {
     // DELETE the following line and replace it with
     // a working solution for the function.
-    return getCardDescription('1H');
+    return getCardDescription('5H');
 }
 
 /**
