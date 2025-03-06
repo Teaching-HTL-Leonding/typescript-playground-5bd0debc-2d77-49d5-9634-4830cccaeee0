@@ -15,7 +15,7 @@ function setup() {
     const pair = "5H,5D,6H,7D,8H";
     const highCard = "2H,3D,5S,7C,0H";
     const random = shuffleCards();
-    
+
     // Test the program with the example hands
     //                 +---------- Change this line to test different hands
     //                 |           (e.g. royalFlush, straightFlush, fourOfAKind, ...)
@@ -78,11 +78,19 @@ function draw() {
 * The function splits the string into an array of cards.
 */
 function splitCardsString(cards: string): string[] {
-    for(let i = 0; i < cards.length; i++){
-        
+    let ergebnis: string[] = [];
+    let cnumber = "";
+    for (let i = 0; i < cards.length; i++) {
+        if (cards[i] === ",") {
+            ergebnis.push(cnumber);
+            cnumber = "";
+        } else {
+            cnumber += cards[i];
+        }
+
     }
-  
-   
+    ergebnis.push(cnumber);
+    return ergebnis;
 }
 
 /**
@@ -95,9 +103,10 @@ function splitCardsString(cards: string): string[] {
 * of e.g. "0H" is 10, not 0!
 */
 function getCardValue(card: string): number {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return 1;
+    if(){
+        
+    }
+    
 }
 
 /**
@@ -114,8 +123,7 @@ function getCardValue(card: string): number {
 * before to get the value of the card.
 */
 function getCardDescription(card: string): string {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
+
     return `${getCardValue(card)} of UNKNOWN`;
 }
 
