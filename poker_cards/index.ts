@@ -188,147 +188,166 @@ function getHighestCard(hand: string[]): string {
 * [0, 0, 0, 0, 0, 2, 0, 2, 1, 0].
 */
 function getCounts(hand: string[]): number[] {
-    let nummerofarray: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-    for(let i = 0; i < hand.length; i++){
-        switch(parseInt(hand[i]))
-        case 1:
+    let numberofarray: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < hand.length; i++) {
+        switch (parseInt(hand[i][0])){
+            case 0: numberofarray[0]++;
+            break;
+            case 1: numberofarray[1]++;
+                break;
+            case 2: numberofarray[2]++;
+                break;
+            case 3: numberofarray[3]++;
+                break;
+            case 4: numberofarray[4]++;
+                break;
+            case 5: numberofarray[5]++;
+                break;
+            case 6: numberofarray[6]++;
+                break;
+            case 7: numberofarray[7]++;
+                break;
+            case 8: numberofarray[8]++;
+                break;
+            case 9: numberofarray[9]++;
+                break;}
 
 
-
+        numberofarray[parseInt(hand[i][0])];
+        }
+        return[0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
-    return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-}
 
-/**
-* Checks if the hand is a flush
-* 
-* @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
-* @returns true if the hand is a flush, false otherwise
-* 
-* A hand is a flush if all cards have the same suite.
-*/
-function isFlush(hand: string[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand is a flush
+    * 
+    * @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
+    * @returns true if the hand is a flush, false otherwise
+    * 
+    * A hand is a flush if all cards have the same suite.
+    */
+    function isFlush(hand: string[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand is a straight
-* 
-* @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
-* @returns true if the hand is a straight, false otherwise
-* 
-* A hand is a straight if the values of the cards are consecutive.
-* 
-* Tip: Consider using the function getCardValue() that you wrote
-* before to get the value of the card.
-*/
-function isStraight(hand: string[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand is a straight
+    * 
+    * @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
+    * @returns true if the hand is a straight, false otherwise
+    * 
+    * A hand is a straight if the values of the cards are consecutive.
+    * 
+    * Tip: Consider using the function getCardValue() that you wrote
+    * before to get the value of the card.
+    */
+    function isStraight(hand: string[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand is a straight flush
-* 
-* @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
-* @returns true if the hand is a straight flush, false otherwise
-* 
-* A hand is a straight flush if it is a flush and a straight.
-*/
-function isStraightFlush(hand: string[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand is a straight flush
+    * 
+    * @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
+    * @returns true if the hand is a straight flush, false otherwise
+    * 
+    * A hand is a straight flush if it is a flush and a straight.
+    */
+    function isStraightFlush(hand: string[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand is a royal flush
-* 
-* @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
-* @returns true if the hand is a royal flush, false otherwise
-* 
-* A hand is a royal flush if it is a straight flush
-* and the lowest card value is a 6.
-*/
-function isRoyalFlush(hand: string[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand is a royal flush
+    * 
+    * @param hand hand (e.g. ["5H", "6H", "7H", "8H", "9H"])
+    * @returns true if the hand is a royal flush, false otherwise
+    * 
+    * A hand is a royal flush if it is a straight flush
+    * and the lowest card value is a 6.
+    */
+    function isRoyalFlush(hand: string[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand has four of a kind
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns true if the hand has four of a kind, false otherwise
-*/
-function hasFourOfAKind(counts: number[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand has four of a kind
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns true if the hand has four of a kind, false otherwise
+    */
+    function hasFourOfAKind(counts: number[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand has three of a kind
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns true if the hand has three of a kind, false otherwise
-*/
-function hasThreeOfAKind(counts: number[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand has three of a kind
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns true if the hand has three of a kind, false otherwise
+    */
+    function hasThreeOfAKind(counts: number[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Gets the number of pairs in the hand
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns number of pairs in the hand (e.g. 2)
-*/
-function numberOfPairs(counts: number[]): number {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return 0;
-}
+    /**
+    * Gets the number of pairs in the hand
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns number of pairs in the hand (e.g. 2)
+    */
+    function numberOfPairs(counts: number[]): number {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return 0;
+    }
 
-/**
-* Checks if the hand has two pairs
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns true if the hand has two pairs, false otherwise
-*/
-function hasTwoPairs(counts: number[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand has two pairs
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns true if the hand has two pairs, false otherwise
+    */
+    function hasTwoPairs(counts: number[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand has a pair
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns true if the hand has a pair, false otherwise
-*/
-function hasPair(counts: number[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand has a pair
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns true if the hand has a pair, false otherwise
+    */
+    function hasPair(counts: number[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
 
-/**
-* Checks if the hand is a full house
-* 
-* @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
-* @returns true if the hand is a full house, false otherwise
-* 
-* A hand is a full house if it has three of a kind and a pair.
-*/
-function isFullHouse(counts: number[]): boolean {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
-    return false;
-}
+    /**
+    * Checks if the hand is a full house
+    * 
+    * @param counts counts (e.g. [0, 0, 0, 0, 0, 2, 0, 2, 1, 0])
+    * @returns true if the hand is a full house, false otherwise
+    * 
+    * A hand is a full house if it has three of a kind and a pair.
+    */
+    function isFullHouse(counts: number[]): boolean {
+        // DELETE the following line and replace it with
+        // a working solution for the function.
+        return false;
+    }
