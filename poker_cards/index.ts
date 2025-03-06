@@ -188,7 +188,14 @@ function getHighestCard(hand: string[]): string {
 * [0, 0, 0, 0, 0, 2, 0, 2, 1, 0].
 */
 function getCounts(hand: string[]): number[] {
-    for()
+    let nummerofarray: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for(let i = 0; i < hand.length; i++){
+        switch(parseInt(hand[i]))
+        case 1:
+
+
+
+    }
     return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 
