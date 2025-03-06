@@ -103,11 +103,30 @@ function splitCardsString(cards: string): string[] {
 * of e.g. "0H" is 10, not 0!
 */
 function getCardValue(card: string): number {
-    if(){
-        
+    if (card[0] === "0") {
+        return 10;
+    }else if (card[1] === "1") {
+        return 1;
+    }else if (card[2] === "2") {
+        return 2;
+    }else if (card[3] === "3") {
+        return 3;
+    }else if (card[4] === "4") {
+        return 4;
+    }else if (card[5] === "5") {
+        return 5;
+    }else if (card[6] === "6") {
+        return 6;
+    }else if (card[7] === "7") {
+        return 7;
+    }else if (card[8] === "8") {
+        return 8;
+    }else{
+        return 9;
     }
-    
+
 }
+
 
 /**
 * Get the description of a card
