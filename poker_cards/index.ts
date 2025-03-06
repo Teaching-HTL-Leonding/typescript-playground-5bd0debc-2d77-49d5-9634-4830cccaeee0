@@ -20,7 +20,7 @@ function setup() {
     //                 +---------- Change this line to test different hands
     //                 |           (e.g. royalFlush, straightFlush, fourOfAKind, ...)
     //                 v
-    const handString = highCard;
+    const handString = random;
 
     hand = splitCardsString(handString);
 }
@@ -144,13 +144,13 @@ function getCardValue(card: string): number {
 function getCardDescription(card: string): string {
     let name = ""
     if (card[1] === "H") {
-        name += "hearts"
+        name += "Hearts"
     } if (card[1] === "D") {
-        name += "diamonds"
+        name += "Diamonds"
     } if (card[1] === "S") {
-        name += "spades"
+        name += "Spades"
     } if (card[1] === "C") {
-        name += "clubs"
+        name += "Clubs"
     }
     return `${getCardValue(card)} of ${name}`;
 }
@@ -165,8 +165,16 @@ function getCardDescription(card: string): string {
 * Tip: Consider using the functions that you wrote before.
 */
 function getHighestCard(hand: string[]): string {
-    
-    return getCardDescription('5H');
+    let higestcard = 0;
+    let indexofcards = 0;
+    for (let i = 0; i < hand.length; i++) {
+        if (getCardValue(hand[i]) >= higestcard) {
+            higestcard = getCardValue(hand[i]);
+            indexofcards = i;
+        }
+
+    }
+    return getCardDescription(hand[indexofcards]);
 }
 
 /**
@@ -180,8 +188,7 @@ function getHighestCard(hand: string[]): string {
 * [0, 0, 0, 0, 0, 2, 0, 2, 1, 0].
 */
 function getCounts(hand: string[]): number[] {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
+    for()
     return [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 }
 
