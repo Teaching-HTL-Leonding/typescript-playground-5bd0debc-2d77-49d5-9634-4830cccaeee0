@@ -165,8 +165,7 @@ function getCardDescription(card: string): string {
 * Tip: Consider using the functions that you wrote before.
 */
 function getHighestCard(hand: string[]): string {
-    // DELETE the following line and replace it with
-    // a working solution for the function.
+    
     return getCardDescription('5H');
 }
 
