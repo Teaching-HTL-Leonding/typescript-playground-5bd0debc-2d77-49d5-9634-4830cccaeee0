@@ -57,6 +57,6 @@ function draw() {
 
  function drawCrossword() {
  for(let i = 0; i < animals.length; i++){
-    const start = width
+    const start = width * i 
  }
  }
