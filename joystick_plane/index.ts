@@ -26,8 +26,8 @@ function setup() {
 function draw() {
   background("lightblue");
 
-  const speedX = stickPositionX / 5;
-  const speedY = stickPositionY / 5;
+  const speedX = stickPositionX / 10;
+  const speedY = stickPositionY / 10;
   fighterPositionX += speedX;
   fighterPositionY += speedY;
 
