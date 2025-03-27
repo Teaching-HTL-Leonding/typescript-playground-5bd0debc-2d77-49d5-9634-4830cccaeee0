@@ -7,6 +7,8 @@ const fighterDisplayWidth = fighterDisplayHeight * (fighterImageWidth / fighterI
 let fighterPositionX = 0;
 let fighterPositionY = 0;
 
+let isdragged = true;
+
 function preload() {
   fighter = loadImage("https://cddataexchange.blob.core.windows.net/images/Spaceship.png");
 }
@@ -23,23 +25,37 @@ function draw() {
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
   pop();
-  
+
 
   stroke('red');
   fill('white');
-  circle(width /2, height - 50, 100);
+  circle(width / 2, height - 50, 100);
 
   noStroke();
   fill('black');
-  circle(width / 2 , height - 50, 20);
-  
-  
+  circle(width / 2, height - 50, 20);
+
+
+}
+function distance(x1: number, x2: number, y1: number, y2: number): boolean {
+const x3 = mouseX - x1 
+const d3 = mouseY - y1
+   
+
+const   isdragged = Math.sqrt()
 }
 
 function mousePressed() {
+
+  if () {
+
+  }
+
 }
 
+
 function mouseDragged() {
+
 }
 
 function mouseReleased() {
