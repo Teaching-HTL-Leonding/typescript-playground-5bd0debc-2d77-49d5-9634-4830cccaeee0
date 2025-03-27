@@ -30,19 +30,21 @@ function draw() {
   const speedY = stickPositionY / 10;
 
   fighterPositionY += speedY;
+  fighterPositionX += speedX;
   push();
   imageMode(CENTER);
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
   pop();
-/*
-  if (fighterPositionX => 250 || fighterPositionX <= -250) {
-    fighterPositionX += speedX;
+
+  /*if (fighterPositionX => 250 || fighterPositionX <= -250) {
+    fighterPositionX += 0;
   }
   else {
-    fighterPositionX += 0;
+    fighterPositionX += speedX;
 
   }*/
+  
   push();
   translate(width / 2, height - movementRadius);
 
