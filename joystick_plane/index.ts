@@ -28,15 +28,21 @@ function draw() {
 
   const speedX = stickPositionX / 10;
   const speedY = stickPositionY / 10;
-  fighterPositionX += speedX;
-  fighterPositionY += speedY;
 
+  fighterPositionY += speedY;
   push();
   imageMode(CENTER);
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
   pop();
+/*
+  if (fighterPositionX => 250 || fighterPositionX <= -250) {
+    fighterPositionX += speedX;
+  }
+  else {
+    fighterPositionX += 0;
 
+  }*/
   push();
   translate(width / 2, height - movementRadius);
 
@@ -53,9 +59,9 @@ function draw() {
 function mousePressed() {
   // Is the mouse click inside the joystick?
   const dist = calcDistance(
-    stickPositionX, 
-    stickPositionY, 
-    mouseX - width / 2, 
+    stickPositionX,
+    stickPositionY,
+    mouseX - width / 2,
     mouseY - (height - movementRadius));
   isDragging = dist < stickRadius;
   // if (dist <= stickRadius) {
@@ -80,6 +86,7 @@ function mouseReleased() {
 // This method returns the distance between center of joystick
 // and mouse position.
 function calcDistance(jsX: number, jsY: number, mX: number, mY: number): number {
+
   const dx = jsX - mX;
   const dy = jsY - mY;
   return Math.sqrt(dx * dx + dy * dy);
