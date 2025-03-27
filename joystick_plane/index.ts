@@ -29,21 +29,34 @@ function draw() {
   const speedX = stickPositionX / 10;
   const speedY = stickPositionY / 10;
 
-  fighterPositionY += speedY;
-  fighterPositionX += speedX;
+  //fighterPositionY += speedY;
+  //fighterPositionX += speedX;
   push();
   imageMode(CENTER);
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
-  pop();
 
-  /*if (fighterPositionX => 250 || fighterPositionX <= -250) {
+  
+  if (fighterPositionX > 250 || fighterPositionX < -250) {
     fighterPositionX += 0;
+  
   }
   else {
     fighterPositionX += speedX;
 
-  }*/
+  }
+
+  if (fighterPositionY > 250 || fighterPositionY < -250) {
+    fighterPositionY += 0;
+  
+  }
+  else {
+    fighterPositionY += speedX;
+
+  }
+  pop();
+  
+  
   
   push();
   translate(width / 2, height - movementRadius);
