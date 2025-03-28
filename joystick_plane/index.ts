@@ -26,8 +26,8 @@ function setup() {
 function draw() {
   background("lightblue");
 
-  const speedX = stickPositionX / 10;
-  const speedY = stickPositionY / 10;
+  const speedX = stickPositionX / 5;
+  const speedY = stickPositionY / 5;
 
   //fighterPositionY += speedY;
   //fighterPositionX += speedX;
@@ -36,28 +36,32 @@ function draw() {
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
 
-  
-  if (fighterPositionX > 250 || fighterPositionX < -250) {
-    fighterPositionX += 0;
-  
+
+  if (fighterPositionX > 250) {
+    fighterPositionX = 249;
+
+  } else if (fighterPositionX < -250) {
+    fighterPositionX = -249;
   }
   else {
     fighterPositionX += speedX;
 
   }
 
-  if (fighterPositionY > 250 || fighterPositionY < -250) {
-    fighterPositionY += 0;
-  
+  if (fighterPositionY > 250) {
+    fighterPositionY = 249;
+
+  } else if (fighterPositionY < -250) {
+    fighterPositionY = -249;
   }
   else {
     fighterPositionY += speedY;
 
   }
   pop();
-  
-  
-  
+
+
+
   push();
   translate(width / 2, height - movementRadius);
 
