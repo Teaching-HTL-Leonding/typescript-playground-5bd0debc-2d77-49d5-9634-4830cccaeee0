@@ -51,7 +51,7 @@ function draw() {
   
   }
   else {
-    fighterPositionY += speedX;
+    fighterPositionY += speedY;
 
   }
   pop();
