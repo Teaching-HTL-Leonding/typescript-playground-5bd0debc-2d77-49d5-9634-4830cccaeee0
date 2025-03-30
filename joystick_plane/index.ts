@@ -29,34 +29,26 @@ function draw() {
   const speedX = stickPositionX / 5;
   const speedY = stickPositionY / 5;
 
-  //fighterPositionY += speedY;
-  //fighterPositionX += speedX;
   push();
+
   imageMode(CENTER);
   translate(width / 2 + fighterPositionX, height / 2 + fighterPositionY);
   image(fighter, 0, 0, fighterDisplayWidth, fighterDisplayHeight);
 
-
+  fighterPositionX += speedX;
   if (fighterPositionX > 250) {
-    fighterPositionX = 249;
+    fighterPositionX = 250;
 
   } else if (fighterPositionX < -250) {
-    fighterPositionX = -249;
-  }
-  else {
-    fighterPositionX += speedX;
-
+    fighterPositionX = -250;
   }
 
+  fighterPositionY += speedY;
   if (fighterPositionY > 250) {
-    fighterPositionY = 249;
+    fighterPositionY = 250;
 
   } else if (fighterPositionY < -250) {
-    fighterPositionY = -249;
-  }
-  else {
-    fighterPositionY += speedY;
-
+    fighterPositionY = -250;
   }
   pop();
 
@@ -76,34 +68,37 @@ function draw() {
 }
 
 function mousePressed() {
-  // Is the mouse click inside the joystick?
   const dist = calcDistance(
     stickPositionX,
     stickPositionY,
     mouseX - width / 2,
     mouseY - (height - movementRadius));
   isDragging = dist < stickRadius;
-  // if (dist <= stickRadius) {
-  //   // inside
-  //   isDragging = true;
-  // } else {
-  //   // outside
-  //   isDragging = false;
-  // }
 }
 
 function mouseDragged() {
   if (isDragging) {
     stickPositionX = mouseX - width / 2;
     stickPositionY = mouseY - (height - movementRadius);
+
+    const dist1 = calcDistance(
+      width / 2,
+      height - movementRadius,
+      mouseX,
+      mouseY);
+
+    let faktor = dist1 / movementRadius;
+
+    if (dist1 > movementRadius) {
+      stickPositionX = stickPositionX / faktor
+      stickPositionY = stickPositionY / faktor
+    }
   }
 }
 
+
 function mouseReleased() {
 }
-
-// This method returns the distance between center of joystick
-// and mouse position.
 function calcDistance(jsX: number, jsY: number, mX: number, mY: number): number {
 
   const dx = jsX - mX;
