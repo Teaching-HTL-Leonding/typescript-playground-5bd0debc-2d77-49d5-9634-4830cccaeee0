@@ -87,9 +87,9 @@ function mouseDragged() {
       mouseX,
       mouseY);
 
-    let faktor = dist1 / movementRadius;
+    let faktor = dist1 / (movementRadius - stickRadius);
 
-    if (dist1 > movementRadius) {
+    if (dist1 > (movementRadius - stickRadius)) {
       stickPositionX = stickPositionX / faktor
       stickPositionY = stickPositionY / faktor
     }
