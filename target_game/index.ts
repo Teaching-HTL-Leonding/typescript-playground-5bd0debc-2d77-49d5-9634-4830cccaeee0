@@ -10,6 +10,8 @@ let spawnY2 = 0;
 
 let dragging = false;
 
+
+
 function setup() {
   createCanvas(800, 600);
 
@@ -19,18 +21,10 @@ function setup() {
   spawnX2 = random(grayrad, width - grayrad); 
   spawnY2 = random(grayrad, height - grayrad); 
 
-
 }
 
 function draw() {
   background("lightgray");
-
-  if(spawnX === spawnX2){
-    spawnX = random(bluerad, width - bluerad);
-  }
-  if(spawnY === spawnY2){
-    spawnY = random(bluerad, height - bluerad);
-  }
 
   fill('blue');
   noStroke();
@@ -64,7 +58,17 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
+  dragging = false;
   
+}
+
+function kreiskreis(x1: number, y1: number, x2: number, y2: number): boolean {
+  const dx = x1 - x2; 
+  const dy = y1 - y2;
+  Math.sqrt(dx * dx + dy * dy);
+  
+
+
 }
 
 // <<< Add additional functions here
