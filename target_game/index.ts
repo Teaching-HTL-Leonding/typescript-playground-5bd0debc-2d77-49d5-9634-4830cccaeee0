@@ -18,9 +18,16 @@ function setup() {
   spawnX = random(bluerad, width - bluerad);
   spawnY = random(bluerad, height - bluerad);
 
-  spawnX2 = random(grayrad, width - grayrad); 
-  spawnY2 = random(grayrad, height - grayrad); 
+  spawnX2 = random(grayrad, width - grayrad);
+  spawnY2 = random(grayrad, height - grayrad);
 
+  while(!kreisistausserhalb(spawnX, spawnY, bluerad, spawnX2, spawnY2, grayrad)) {
+    spawnX = random(bluerad, width - bluerad);
+    spawnY = random(bluerad, height - bluerad);
+
+    spawnX2 = random(grayrad, width - grayrad);
+    spawnY2 = random(grayrad, height - grayrad);
+  }
 }
 
 function draw() {
@@ -30,11 +37,10 @@ function draw() {
   noStroke();
   circle(spawnX, spawnY, bluerad * 2);
 
-  
+
   noFill();
   stroke('black');
   circle(spawnX2, spawnY2, grayrad * 2);
-  
 
 
   // <<< Add drawing logic here
@@ -51,7 +57,7 @@ function mousePressed() {
 }
 
 function mouseDragged() {
-  if(dragging){
+  if (dragging) {
     spawnX = mouseX;
     spawnY = mouseY;
   }
@@ -59,15 +65,14 @@ function mouseDragged() {
 
 function mouseReleased() {
   dragging = false;
-  
+
 }
 
-function kreiskreis(x1: number, y1: number, x2: number, y2: number): boolean {
-  const dx = x1 - x2; 
+function kreisistausserhalb(x1: number, y1: number, r1: number, x2: number, y2: number, r2: number): boolean {
+  const dx = x1 - x2;
   const dy = y1 - y2;
-  Math.sqrt(dx * dx + dy * dy);
-  
-
+  const distance = Math.sqrt(dx * dx + dy * dy);
+  return distance > r1 + r2;
 
 }
 
